@@ -25,7 +25,7 @@ public class App extends Application {
         
         stage.setScene(scene);
         
-        stage.titleProperty().set("MainWindow");
+        stage.titleProperty().set("RObie");
         
         stage.show();
     }
