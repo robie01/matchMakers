@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package matchmakers;
+package GUI.Main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,13 +19,15 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/MainView.fxml"));
         
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
         
         stage.titleProperty().set("Jesper");
+        
+        stage.setResizable(true);
         
         stage.show();
     }
