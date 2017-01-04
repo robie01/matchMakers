@@ -25,7 +25,7 @@ public class App extends Application {
         
         stage.setScene(scene);
         
-        stage.titleProperty().set("Jesper");
+        stage.titleProperty().set("MatchMaker");
         
         stage.setResizable(true);
         
