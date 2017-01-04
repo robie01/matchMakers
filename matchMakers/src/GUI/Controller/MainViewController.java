@@ -74,7 +74,7 @@ private void MatchSAction(ActionEvent event) throws IOException{
    stage = new Stage();
    root = FXMLLoader.load(getClass().getResource("/GUI/View/Finals.fxml"));
    stage.setScene(new Scene(root));
-   stage.setTitle("My modal window");
+   stage.setTitle("Finals");
    stage.initModality(Modality.APPLICATION_MODAL);
    stage.initOwner(MatchS.getScene().getWindow());
    stage.showAndWait();

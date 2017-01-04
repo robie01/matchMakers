@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,11 +10,11 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainViewController">
    <children>
-      <AnchorPane layoutX="-6.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane layoutX="-6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="600.0">
          <children>
-            <GridPane layoutX="221.0" layoutY="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+            <GridPane layoutX="31.0" layoutY="253.0" prefHeight="150.0" prefWidth="554.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="253.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -25,15 +26,19 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" text="Group A" />
-                  <Button mnemonicParsing="false" text="Group B" GridPane.columnIndex="1" />
-                  <Button mnemonicParsing="false" text="Grup C" GridPane.columnIndex="2" />
-                  <Button mnemonicParsing="false" text="Group D" GridPane.columnIndex="3" />
+                  <Button fx:id="GroupA" mnemonicParsing="false" onAction="#GroupASAction" prefHeight="27.0" prefWidth="75.0" text="Group A" />
+                  <Button fx:id="GroupB" mnemonicParsing="false" onAction="#GroupBSAction" text="Group B" GridPane.columnIndex="1" />
+                  <Button fx:id="GroupC" mnemonicParsing="false" onAction="#GroupCSAction" text="Group C" GridPane.columnIndex="2" />
+                  <Button fx:id="GroupD" mnemonicParsing="false" onAction="#GroupDSAction" prefHeight="25.0" prefWidth="71.0" text="Group D" GridPane.columnIndex="3" />
+                  <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                  <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                </children>
             </GridPane>
-            <Button layoutX="24.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" text="Match Scheduel" />
-            <Button layoutX="436.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" text="Group Rankingslist" />
-            <Button layoutX="228.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" text="Team Scheduel" />
+            <Button fx:id="MatchS" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#MatchSAction" prefHeight="47.0" prefWidth="150.0" text="Match Scheduel" />
+            <Button fx:id="GroupR" layoutX="436.0" layoutY="24.0" mnemonicParsing="false" onAction="#GroupRankAction" prefHeight="47.0" prefWidth="150.0" text="Group Rankingslist" />
+            <Button fx:id="TeamS" layoutX="225.0" layoutY="24.0" mnemonicParsing="false" onAction="#TeamSAction" prefHeight="47.0" prefWidth="150.0" text="Team Scheduel" />
             <Label layoutX="76.0" layoutY="70.0" prefHeight="180.0" prefWidth="465.0" AnchorPane.topAnchor="70.0" />
             <ImageView fitHeight="75.0" fitWidth="465.0" layoutX="76.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
                <image>
