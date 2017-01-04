@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="30.0" layoutY="452.0" prefHeight="27.0" prefWidth="98.0" text="Group A - 1" />
+      <TextField layoutX="148.0" layoutY="452.0" prefHeight="27.0" prefWidth="48.0" />
+      <TextField layoutX="211.0" layoutY="452.0" prefHeight="27.0" prefWidth="104.0" text="Group B - 2" />
+      <TextField layoutX="344.0" layoutY="453.0" prefHeight="27.0" prefWidth="98.0" text="Group A - 2" />
+      <TextField layoutX="458.0" layoutY="453.0" prefHeight="27.0" prefWidth="48.0" />
+      <TextField layoutX="962.0" layoutY="452.0" prefHeight="27.0" prefWidth="79.0" text="Group -C - 2" />
+      <TextField layoutX="839.0" layoutY="452.0" prefHeight="27.0" prefWidth="101.0" text="Group D - 2" />
+      <TextField layoutX="775.0" layoutY="452.0" prefHeight="27.0" prefWidth="49.0" />
+      <TextField layoutX="652.0" layoutY="452.0" prefHeight="27.0" prefWidth="104.0" text="Group C - 1" />
+      <TextField layoutX="522.0" layoutY="453.0" prefHeight="27.0" prefWidth="98.0" text="Group B - 1 " />
+      <TextField layoutX="1112.0" layoutY="452.0" prefHeight="28.0" prefWidth="91.0" text="Group - D -1" />
+      <TextField layoutX="1052.0" layoutY="452.0" prefHeight="0.0" prefWidth="50.0" />
+      <TextField layoutX="79.0" layoutY="371.0" />
+      <TextField layoutX="383.0" layoutY="371.0" />
+      <TextField layoutX="704.0" layoutY="371.0" />
+      <TextField layoutX="994.0" layoutY="371.0" prefHeight="27.0" prefWidth="167.0" />
+      <TextField layoutX="276.0" layoutY="371.0" prefHeight="27.0" prefWidth="79.0" />
+      <TextField layoutX="226.0" layoutY="291.0" prefHeight="27.0" prefWidth="188.0" text=" " />
+      <TextField layoutX="571.0" layoutY="291.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="836.0" layoutY="291.0" prefHeight="27.0" prefWidth="188.0" />
+      <TextField layoutX="890.0" layoutY="371.0" prefHeight="27.0" prefWidth="79.0" />
+      <TextField layoutX="587.0" layoutY="163.0" prefHeight="27.0" prefWidth="66.0" text="Winner" />
+      <TextField layoutX="542.0" layoutY="210.0" />
+      <TextField layoutX="570.0" layoutY="335.0" prefHeight="27.0" prefWidth="104.0" text="Semi-Finals" />
+      <TextField layoutX="591.0" layoutY="250.0" prefHeight="27.0" prefWidth="59.0" text="Finals" />
+      <TextField layoutX="568.0" layoutY="407.0" prefHeight="27.0" prefWidth="104.0" text="Qurater-Finals" />
+   </children>
+</AnchorPane>
