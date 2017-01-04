@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.GroupScheduleViewController">
+   <children>
+      <TableView fx:id="ViewRankingResult" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+          <TableColumn prefWidth="196.0" text="Home Team" />
+          <TableColumn prefWidth="111.0" text="Goal" />
+            <TableColumn prefWidth="159.0" text="Guest Team" />
+            <TableColumn prefWidth="133.0" text="Match ID's" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

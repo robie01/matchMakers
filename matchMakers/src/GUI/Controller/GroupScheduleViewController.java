@@ -16,7 +16,7 @@ import javafx.scene.control.TableView;
  *
  * @author robiesun
  */
-public class GroupRankingController implements Initializable {
+public class GroupScheduleViewController implements Initializable {
 
     @FXML
     private TableView<?> ViewRankingResult;
