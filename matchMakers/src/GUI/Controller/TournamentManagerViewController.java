@@ -51,9 +51,23 @@ public class TournamentManagerViewController implements Initializable {
     
 
     @FXML
-    private void generatebtnAction(ActionEvent event)
+    private void generatebtnAction(ActionEvent event) throws IOException
     {
+        Stage stage = null; 
+     Parent root = null;
+     if(event.getSource()==generatebtnID){
+        //get reference to the button's stage         
+        stage=(Stage) generatebtnID.getScene().getWindow();
+        //load up OTHER FXML document
+  root = FXMLLoader.load(getClass().getResource("/GUI/View/MainView.fxml"));
+      }
+     
+     //create a new scene with root and set the stage
+      Scene scene = new Scene(root);
+      stage.setScene(scene);
+      stage.show();
     }
+    
 
     @FXML
     private void addbtnAction(ActionEvent event) throws IOException
