@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="-6.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -38,7 +37,7 @@
                   <JFXButton text="Group D" GridPane.columnIndex="3" />
                </children>
             </GridPane>
-            <Button layoutX="6.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="195.0" text="Complete Match Scheduel" />
+            <Button layoutX="24.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" text="Match Scheduel" />
             <Button layoutX="436.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" text="Group Rankingslist" />
             <Button layoutX="228.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" text="Team Scheduel" />
             <Label layoutX="76.0" layoutY="70.0" prefHeight="180.0" prefWidth="465.0" AnchorPane.topAnchor="70.0" />
