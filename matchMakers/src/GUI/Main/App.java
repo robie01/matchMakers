@@ -19,7 +19,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/MainView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/TournamentManager.fxml"));
         
         Scene scene = new Scene(root);
         

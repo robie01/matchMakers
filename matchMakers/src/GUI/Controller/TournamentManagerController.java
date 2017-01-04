@@ -17,7 +17,7 @@ import javafx.scene.control.Label;
  *
  * @author Masoud
  */
-public class FXMLDocumentController implements Initializable {
+public class TournamentManagerController implements Initializable {
     
     private Label label;
     @FXML
@@ -41,13 +41,16 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void addBtnAction(ActionEvent event)
+    private void addTeamAction(ActionEvent event)
     {
+        System.out.println("eat shit");
     }
 
     @FXML
     private void dltBtnAction(ActionEvent event)
     {
     }
-    
+    private void songListViewColumns() {
+        
+    }
 }
