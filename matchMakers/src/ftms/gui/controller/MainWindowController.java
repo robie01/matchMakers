@@ -3,31 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI.Controller;
+package ftms.gui.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableView;
 
 /**
  * FXML Controller class
  *
- * @author Jesper Enemark
+ * @author Masoud
  */
-public class TeamScheduleViewController implements Initializable
-{
-
-    @FXML
-    private TableView<?> ViewRankingResult;
+public class MainWindowController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
+    public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     
