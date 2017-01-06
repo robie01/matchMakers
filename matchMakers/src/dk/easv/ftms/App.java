@@ -1,4 +1,4 @@
-package ftms;
+package dk.easv.ftms;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -7,6 +7,7 @@ package ftms;
  */
 
 
+import java.util.UUID;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,7 +22,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/ftms/gui/view/MainWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/dk/easv/ftms/gui/view/MainWindow.fxml"));
         
         Scene scene = new Scene(root);
         
