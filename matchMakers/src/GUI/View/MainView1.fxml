@@ -11,12 +11,10 @@
    <children>
       <TableView fx:id="groupMatch" layoutY="50.0" prefHeight="346.0" prefWidth="700.0">
         <columns>
-          <TableColumn fx:id="teamNameColumn" prefWidth="122.0" text="Team Name" />
-          <TableColumn fx:id="teamIdColumn" prefWidth="120.0" text="Team ID's" />
-            <TableColumn fx:id="groupAColumn" prefWidth="106.0" text="Group A" />
-            <TableColumn fx:id="groupBColumn" prefWidth="109.0" text="Group B" />
-            <TableColumn fx:id="groupCColumn" prefWidth="122.0" text="Group C" />
-            <TableColumn fx:id="groupDColumn" prefWidth="120.0" text="Group D" />
+            <TableColumn fx:id="groupAColumn" prefWidth="175.66382479667664" text="Group A" />
+            <TableColumn fx:id="groupBColumn" prefWidth="187.33616638183594" text="Group B" />
+            <TableColumn fx:id="groupCColumn" prefWidth="169.55740356445312" text="Group C" />
+            <TableColumn fx:id="groupDColumn" prefWidth="168.43222045898438" text="Group D" />
         </columns>
       </TableView>
       <Label layoutX="21.0" layoutY="9.0" prefHeight="30.0" prefWidth="193.0" text="Group Match" textFill="#161d9e">

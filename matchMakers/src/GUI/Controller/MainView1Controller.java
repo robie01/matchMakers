@@ -72,7 +72,7 @@ public class MainView1Controller implements Initializable {
     if(event.getSource()==matchS)
     {
      stage = new Stage();
-     root = FXMLLoader.load(getClass().getResource("/GUI/View/MainView.fxml"));
+     root = FXMLLoader.load(getClass().getResource("/GUI/View/Finals.fxml"));
      stage.setScene(new Scene(root));
      stage.setTitle("Finals");
      stage.initModality(Modality.APPLICATION_MODAL);
