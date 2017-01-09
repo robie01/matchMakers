@@ -6,9 +6,8 @@
 package GUI.Model;
 
 import BE.*;
-import java.util.Observable;
+import java.util.ArrayList;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 
 /**
