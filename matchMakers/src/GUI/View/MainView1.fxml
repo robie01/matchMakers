@@ -7,16 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainView1Controller">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainView1Controller">
    <children>
       <TableView fx:id="groupMatch" layoutY="50.0" prefHeight="346.0" prefWidth="700.0">
         <columns>
-          <TableColumn fx:id="teamNameColumn" prefWidth="122.0" text="Team Name" />
-          <TableColumn fx:id="teamIdColumn" prefWidth="120.0" text="Team ID's" />
-            <TableColumn fx:id="groupAColumn" prefWidth="106.0" text="Group A" />
-            <TableColumn fx:id="groupBColumn" prefWidth="109.0" text="Group B" />
-            <TableColumn fx:id="groupCColumn" prefWidth="122.0" text="Group C" />
-            <TableColumn fx:id="groupDColumn" prefWidth="120.0" text="Group D" />
+            <TableColumn fx:id="groupAColumn" prefWidth="157.0" text="Group A" />
+            <TableColumn fx:id="groupBColumn" prefWidth="177.0" text="Group B" />
+            <TableColumn fx:id="groupCColumn" prefWidth="185.0" text="Group C" />
+            <TableColumn fx:id="groupDColumn" prefWidth="180.0" text="Group D" />
         </columns>
       </TableView>
       <Label layoutX="21.0" layoutY="9.0" prefHeight="30.0" prefWidth="193.0" text="Group Match" textFill="#161d9e">

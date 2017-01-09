@@ -5,7 +5,9 @@
  */
 package GUI.Controller;
 
+import BE.Group;
 import BE.Team;
+import GUI.Model.TeamModel;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,7 +26,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
@@ -39,8 +44,7 @@ public class TournamentManagerViewController implements Initializable {
     private Button generatebtnID;
     @FXML
     private Label teamcountlbl;
-    @FXML
-    private ListView<Team> teamNameListview;
+   
     @FXML
     private TextField txtField;
     @FXML
@@ -54,10 +58,16 @@ public class TournamentManagerViewController implements Initializable {
     private int teamCount = 0;
      
     private int teamId = 0;
-  
+    private TeamModel teamModel= TeamModel.getTeamModel();
     
-    ObservableList<Team> teamList = FXCollections.observableArrayList();
-    //
+    
+    @FXML
+    private TableView<Team> tblTeams;
+    @FXML
+    private TableColumn<Team, String> clmTeamName;
+    @FXML
+    private TableColumn<Team, String> clmTeamId;
+    
    
   
    
@@ -69,7 +79,11 @@ public class TournamentManagerViewController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        teamNameListview.setItems(teamList); // Binding
+        clmTeamName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        clmTeamId.setCellValueFactory(new PropertyValueFactory<>("id"));
+                
+        
+        tblTeams.setItems(teamModel.getTeams()); // Binding
     }    
 
 
@@ -78,6 +92,7 @@ public class TournamentManagerViewController implements Initializable {
     @FXML
     private void generatebtnAction(ActionEvent event) 
     {
+        
         if(teamCount == 0 || teamCount == 0){
                             
       
@@ -98,17 +113,14 @@ public class TournamentManagerViewController implements Initializable {
             } catch (IOException ex) {
                 Logger.getLogger(TournamentManagerViewController.class.getName()).log(Level.SEVERE, null, ex);
             }
-                MainView1Controller controller = (MainView1Controller)fxmlLoader.getController();
-        controller.setTeamList(teamList);
-        
-        
-      }
+             
      
      //create a new scene with root and set the stage
       Scene scene = new Scene(root);
       stage.setScene(scene);
       stage.show();
-    }
+        }
+        }
     }
     
 
@@ -118,24 +130,27 @@ public class TournamentManagerViewController implements Initializable {
          
         if(!txtField.getText().isEmpty()) {
             
-            teamList.add(new Team(++teamId,txtField.getText()));
+            teamModel.getTeams().add(new Team(teamId++ ,txtField.getText()));
             teamcountlbl.setText(""+ ++teamCount);
             txtField.clear();
             warningSign.setText("");
+            System.out.print(teamModel.getTeams());
+            
         }
          
         else
             warningSign.setText("Warning: team name required");
           
     }
+    
 
     @FXML
     private void deletebtnAction(ActionEvent event)
     {
        
                
-        int selectedItem = teamNameListview.getSelectionModel().getSelectedIndex();
-        teamList.remove(selectedItem);
+        int selectedItem = tblTeams.getSelectionModel().getSelectedIndex();
+        teamModel.getTeams().remove(selectedItem);
         teamCount--;
     
         teamcountlbl.setText("" + teamCount);
@@ -148,16 +163,16 @@ public class TournamentManagerViewController implements Initializable {
     private void updateBtnAction(ActionEvent event) {
         
         
-//        if(!txtField.getText().isEmpty()) {
-//            
-//            teamList.add(new Team(++teamId,txtField.getText()));
-//            teamcountlbl.setText(""+ ++teamCount);
-//            txtField.clear();
-//            warningSign.setText("");
-//        }
-//         
-//        else
-//            warningSign.setText("Warning: team name required");
+        if(!txtField.getText().isEmpty()) {
+            
+            teamModel.getTeams().add(new Team(teamId ,txtField.getText()));
+            teamcountlbl.setText(""+ ++teamCount);
+            txtField.clear();
+            warningSign.setText("");
+        }
+         
+        else
+            warningSign.setText("Warning: team name required");
     }
    
 }
