@@ -13,22 +13,7 @@ package BE;
  */
 public class Group
 {
-   private String teamName;
    
    
-   public Group(String teamName) {
-       this.teamName = teamName;
-   }
    
-public String getTeamName()
-    {
-        return teamName;
-    }
-public void setTeamName(String name) {
-        this.teamName = name;
-    }
-@Override
-    public String toString() {
-        return teamName;
-    }
 }

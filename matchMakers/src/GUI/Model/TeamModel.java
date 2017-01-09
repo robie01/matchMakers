@@ -20,6 +20,11 @@ public class TeamModel
     private static final TeamModel TEAMMODEL = new TeamModel();
     
     private ObservableList<Team> teamList = FXCollections.observableArrayList();
+    private ArrayList<Group> GroupA =  new ArrayList<>();
+    private ArrayList<Group> GroupB =  new ArrayList<>();
+    private ArrayList<Group> GroupC =  new ArrayList<>();
+    private ArrayList<Group> GroupD =  new ArrayList<>();
+    
     
     //singleton
     private TeamModel() 
@@ -29,6 +34,22 @@ public class TeamModel
     public ObservableList<Team> getTeams() {
         return teamList;
     }
+    public ArrayList<Group> getGroupA() {
+        return GroupA;
+    }
+    public ArrayList<Group> getGroupB() {
+        return GroupB;
+    }
+    public ArrayList<Group> getGroupC() {
+        return GroupC;
+    }
+    public ArrayList<Group> getGroupD() {
+        return GroupD;
+    }
+    
+    
+    
+    
     
     //Singleton
     public static TeamModel getTeamModel() {

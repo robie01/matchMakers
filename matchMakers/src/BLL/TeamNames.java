@@ -5,7 +5,7 @@
  */
 package BLL;
 
-import BE.Team;
+import BE.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class TeamNames
 {
-    private List<Team> team =  new ArrayList<>();
+    
     
     
 }
