@@ -31,18 +31,6 @@ import javafx.stage.Stage;
 public class MainView1Controller implements Initializable {
 
     @FXML
-    private TableColumn<GroupMatch, String> teamNameColumn;
-    @FXML
-    private TableColumn<GroupMatch, String> teamIdColumn;
-    @FXML
-    private TableColumn<GroupMatch, String> groupAColumn;
-    @FXML
-    private TableColumn<GroupMatch, String> groupBColumn;
-    @FXML
-    private TableColumn<GroupMatch, String> groupCColumn;
-    @FXML
-    private TableColumn<GroupMatch, String> groupDColumn;
-    @FXML
     private TableView<String> groupMatch;
     @FXML
     private Button teamS;
@@ -50,6 +38,14 @@ public class MainView1Controller implements Initializable {
     private Button matchS;
     @FXML
     private Button groupR;
+    @FXML
+    private TableColumn<?, ?> clmGroupA;
+    @FXML
+    private TableColumn<?, ?> clmGroupB;
+    @FXML
+    private TableColumn<?, ?> clmGroupC;
+    @FXML
+    private TableColumn<?, ?> clmGroupD;
 
    
      
