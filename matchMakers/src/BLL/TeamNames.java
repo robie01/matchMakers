@@ -5,11 +5,15 @@
  */
 package BLL;
 
+import BE.Team;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Jesper Enemark
  */
-public class NewClass
+public class TeamNames
 {
-    
+    private List<Team> team =  new ArrayList<>();
 }

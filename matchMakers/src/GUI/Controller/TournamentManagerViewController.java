@@ -5,9 +5,14 @@
  */
 package GUI.Controller;
 
+import BE.Team;
+
 import java.io.IOException;
 import java.net.URL;
+
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,89 +25,139 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-
 
 /**
  *
  * @author Masoud
  */
-public class TournamentManagerViewController implements Initializable
-{
-
+public class TournamentManagerViewController implements Initializable {
     
+    private Label label;
     @FXML
     private Button generatebtnID;
     @FXML
-    private Button addbtnID;
-    @FXML
-    private Button deletebtnID;
-    @FXML
     private Label teamcountlbl;
     @FXML
-    private ListView<String> teamNameListview;
-
+    private ListView<Team> teamNameListview;
     @FXML
-    private TextField txtfield;
-    //a list
-    ObservableList<String> teamList = FXCollections.observableArrayList();
-    //instance variable
-    public int teamCount = 0;
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
-
-    }
-    /*
-    needs implementation **********
+    private TextField txtField;
+    @FXML
+    private Label warningSign;
+    @FXML
+    private Button updateBtn;
+    @FXML
+    private Button deletebtn;
     
-    makes sure generation of a tournament is only allowed between a number of 12 and 16 teams
-    switches view if the statement is true.
-    */
+    
+    private int teamCount = 0;
+     
+    private int teamId = 0;
+  
+    
+    ObservableList<Team> teamList = FXCollections.observableArrayList();
+    //
+   
+  
+   
+   
+   
+   
+    
+   
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        teamNameListview.setItems(teamList); // Binding
+    }    
+
+
+    
+
     @FXML
-    private void generatebtnAction(ActionEvent event) throws IOException
+    private void generatebtnAction(ActionEvent event) 
     {
-        if (teamCount >= 12 && teamCount <= 16)
-        {
-            Stage stage = null;
-            Parent root = null;
-            if (event.getSource() == generatebtnID)
-            {
-                //get reference to the button's stage         
-                stage = (Stage) generatebtnID.getScene().getWindow();
-                //load up OTHER FXML document
-                root = FXMLLoader.load(getClass().getResource("/GUI/View/MainView.fxml"));
+        if(teamCount == 0 || teamCount == 0){
+                            
+      
+        Stage stage = null; 
+        Parent root = null;
+        
+        
+        
+        if(event.getSource()==generatebtnID){
+        
+        //get reference to the button's stage  
+       stage=(Stage) generatebtnID.getScene().getWindow();
+       
+       //load up OTHER FXML document
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/MainView1.fxml"));
+            try {
+                root = fxmlLoader.load();
+            } catch (IOException ex) {
+                Logger.getLogger(TournamentManagerViewController.class.getName()).log(Level.SEVERE, null, ex);
             }
-
-            //create a new scene with root and set the stage
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-
+                MainView1Controller controller = (MainView1Controller)fxmlLoader.getController();
+        controller.setTeamList(teamList);
+        
+        
+      }
+     
+     //create a new scene with root and set the stage
+      Scene scene = new Scene(root);
+      stage.setScene(scene);
+      stage.show();
     }
-    //adds whatever is in the txtfield to the listView, increases teamcount by 1, sets label equavelant to teamcount, clears txtfield.
+    }
+    
+
     @FXML
     private void addbtnAction(ActionEvent event) throws IOException
     {
-        
-        teamList.add(txtfield.getText());
-        teamNameListview.setItems(teamList);
-        teamCount++;
-        teamcountlbl.setText(""+teamCount);
-        txtfield.clear();
-
+         
+        if(!txtField.getText().isEmpty()) {
+            
+            teamList.add(new Team(++teamId,txtField.getText()));
+            teamcountlbl.setText(""+ ++teamCount);
+            txtField.clear();
+            warningSign.setText("");
+        }
+         
+        else
+            warningSign.setText("Warning: team name required");
+          
     }
 
-    //delete action, deletes the selectedItem in the listView, remove one number from teamCount and sets label equal to teamCount variable.
     @FXML
-    private void deletebtnAction(ActionEvent event) throws IOException
+    private void deletebtnAction(ActionEvent event)
     {
+       
+               
         int selectedItem = teamNameListview.getSelectionModel().getSelectedIndex();
         teamList.remove(selectedItem);
         teamCount--;
-        teamcountlbl.setText(""+teamCount);
+    
+        teamcountlbl.setText("" + teamCount);
+        teamId--;
+        txtField.clear();
 
     }
+
+    @FXML
+    private void updateBtnAction(ActionEvent event) {
+        
+        
+//        if(!txtField.getText().isEmpty()) {
+//            
+//            teamList.add(new Team(++teamId,txtField.getText()));
+//            teamcountlbl.setText(""+ ++teamCount);
+//            txtField.clear();
+//            warningSign.setText("");
+//        }
+//         
+//        else
+//            warningSign.setText("Warning: team name required");
+    }
+   
 }

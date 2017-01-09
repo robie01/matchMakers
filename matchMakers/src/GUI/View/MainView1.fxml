@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainView1Controller">
+   <children>
+      <TableView fx:id="groupMatch" layoutY="50.0" prefHeight="346.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="teamNameColumn" prefWidth="122.0" text="Team Name" />
+          <TableColumn fx:id="teamIdColumn" prefWidth="120.0" text="Team ID's" />
+            <TableColumn fx:id="groupAColumn" prefWidth="106.0" text="Group A" />
+            <TableColumn fx:id="groupBColumn" prefWidth="109.0" text="Group B" />
+            <TableColumn fx:id="groupCColumn" prefWidth="122.0" text="Group C" />
+            <TableColumn fx:id="groupDColumn" prefWidth="120.0" text="Group D" />
+        </columns>
+      </TableView>
+      <Label layoutX="21.0" layoutY="9.0" prefHeight="30.0" prefWidth="193.0" text="Group Match" textFill="#161d9e">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="teamS" layoutX="103.0" layoutY="431.0" mnemonicParsing="false" onAction="#teamSAction" prefHeight="47.0" prefWidth="133.0" text="Team  Schedule" />
+      <Button fx:id="matchS" layoutX="266.0" layoutY="431.0" mnemonicParsing="false" onAction="#matchSAction" prefHeight="47.0" prefWidth="133.0" text="Match Schedule" />
+      <Button fx:id="groupR" layoutX="424.0" layoutY="434.0" mnemonicParsing="false" onAction="#groupRankAction" prefHeight="47.0" prefWidth="133.0" text="Group Ranking" />
+   </children>
+</AnchorPane>
