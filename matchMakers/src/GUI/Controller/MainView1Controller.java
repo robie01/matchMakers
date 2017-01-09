@@ -52,8 +52,7 @@ public class MainView1Controller implements Initializable {
     @FXML
     private Button groupR;
    
-    private TeamModel teamModel = TeamModel.getTeamModel();
-    
+    private TeamModel teamModel = TeamModel.getTeamModel();    
 
     
      
@@ -91,8 +90,8 @@ public class MainView1Controller implements Initializable {
     
     
     
-    public void addGroups() {
-        tableTeams.setItems(teamModel.getTeams());
+    public void displayGroupA() {
+        teamModel.getGroupA();
     }
     
 }
