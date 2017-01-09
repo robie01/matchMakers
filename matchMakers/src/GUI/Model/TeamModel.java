@@ -24,7 +24,7 @@ public class TeamModel
     //private static int smallestGroups = 3, biggestGroups = 4;
 
     private ObservableList<Team> teamList = FXCollections.observableArrayList();
-    
+
     private ArrayList<Team> groupA = new ArrayList<>();
     private ArrayList<Team> groupB = new ArrayList<>();
     private ArrayList<Team> groupC = new ArrayList<>();
@@ -46,6 +46,16 @@ public class TeamModel
     {
         return groupA;
     }*/
+    public ObservableList<Team> getGroupA() // Used
+    {
+        teamList.get(1);
+        teamList.get(2);
+        teamList.get(3);
+        teamList.get(4);
+        
+        return teamList;
+        
+    }
 
     public ArrayList<Team> getGroupB()
     {
@@ -61,13 +71,7 @@ public class TeamModel
     {
         return groupD;
     }
-    public void getGroupA() // Used
-    {
-        teamList.get(0);
-        teamList.get(1);
-        teamList.get(2);
-        teamList.get(3);
-    }
+
     public ArrayList<ArrayList<Team>> getGroups() //not Used
     {
 
@@ -109,7 +113,7 @@ public class TeamModel
                     teams.setGroup("C");
                     groupC.add(teams);
                     checkNumber = false;
-                    
+
                 } else if (groupD.size() != 4)
                 {
                     teams.setGroup("D");
@@ -122,4 +126,4 @@ public class TeamModel
         }
     }
 
-    }
+}

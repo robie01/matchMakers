@@ -41,10 +41,7 @@ public class MainView1Controller implements Initializable {
     private TableColumn<Team, String> groupBColumn;
     @FXML
     private TableColumn<Team, String> groupCColumn;
-    @FXML
-    private TableColumn<Team, String> GroupDColumn;
-    @FXML
-    private TableView<Team> tableTeams;
+   
     @FXML
     private Button teamS;
     @FXML
@@ -53,17 +50,26 @@ public class MainView1Controller implements Initializable {
     private Button groupR;
    
     private TeamModel teamModel = TeamModel.getTeamModel();    
+    @FXML
+    private TableView<Team> groupMatch;
+    @FXML
+    private TableColumn<Team, String> groupDColumn;
 
     
      
      
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+       groupAColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+       groupMatch.setItems(teamModel.getGroupA());
+      
+       
        
     }    
 
     @FXML
     private void teamSAction(ActionEvent event) {
+        
     }
 
     @FXML
@@ -92,6 +98,7 @@ public class MainView1Controller implements Initializable {
     
     public void displayGroupA() {
         teamModel.getGroupA();
+        
     }
     
 }
