@@ -15,6 +15,7 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -38,8 +39,6 @@ public class MainView1Controller implements Initializable
     private Button teamS;
     @FXML
     private Button matchS;
-    @FXML
-    private Button groupR;
 
     private GroupModel groupModel = GroupModel.getGroupModel();
 
@@ -53,6 +52,8 @@ public class MainView1Controller implements Initializable
     private ListView<Team> listC;
     @FXML
     private ListView<Team> listB;
+    @FXML
+    private Button btnGroupMatch;
 
     @Override
     public void initialize(URL url, ResourceBundle rb)
@@ -64,9 +65,9 @@ public class MainView1Controller implements Initializable
     }
 
     @FXML
-    private void teamSAction(ActionEvent event)
+    private void teamSAction(ActionEvent event) throws IOException
     {
-
+      
     }
 
     @FXML
@@ -89,8 +90,21 @@ public class MainView1Controller implements Initializable
     }
 
     @FXML
-    private void groupRankAction(ActionEvent event)
+    private void groupRankAction(ActionEvent event) throws IOException
     {
+        Stage stage;
+        Parent root;
+        
+        if(event.getSource() == btnGroupMatch) 
+        {
+            stage = new Stage ();
+            root = FXMLLoader.load(getClass().getResource("/GUI/View/GroupScheduleView.fxml"));
+            stage.setScene(new Scene(root));
+            stage.setTitle("Group Matches");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(btnGroupMatch.getScene().getWindow());
+            stage.showAndWait();
+        }
     }
 
     public void displayGroups()
