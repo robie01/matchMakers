@@ -68,9 +68,9 @@ public class TournamentManagerViewController implements Initializable
     public void initialize(URL url, ResourceBundle rb)
     {
        
-          /*for (int i = 0; i < 12; i++) { /////////////// TEST //////////////
+          for (int i = 0; i < 12; i++) { /////////////// TEST //////////////
           teamModel.getTeams().add(new Team(i, i+""));
-            }*/
+}
           
           
         clmTeamId.setCellValueFactory(new PropertyValueFactory<>("id"));

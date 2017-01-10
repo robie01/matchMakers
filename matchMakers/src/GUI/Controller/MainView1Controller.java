@@ -58,6 +58,7 @@ public class MainView1Controller implements Initializable
     public void initialize(URL url, ResourceBundle rb)
     {
 
+        
         groupModel.addTeamToGroup();
         displayGroups();
     }
