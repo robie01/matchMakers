@@ -13,9 +13,3 @@ import java.util.List;
  *
  * @author Jesper Enemark
  */
-public class TeamNames
-{
-    
-    
-    
-}
