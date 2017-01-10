@@ -13,6 +13,7 @@ import java.util.Observable;
 import java.util.Random;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.ListView;
 
 /**
  *
@@ -24,15 +25,16 @@ public class TeamModel
     //singleton
     private static final TeamModel TEAMMODEL = new TeamModel();
     //private static int smallestGroups = 3, biggestGroups = 4;
+    ArrayList<ListView> lists = new ArrayList<>();
 
     private ObservableList<Team> teamList = FXCollections.observableArrayList();
 
-    private ArrayList<Team> groupA = new ArrayList<>();
+ /* private ArrayList<Team> groupA = new ArrayList<>();
     private ArrayList<Team> groupB = new ArrayList<>();
     private ArrayList<Team> groupC = new ArrayList<>();
     private ArrayList<Team> groupD = new ArrayList<>();
     private ArrayList<ArrayList<Team>> Groups = new ArrayList<>();
-
+*/
     //singleton
     private TeamModel()
     {
@@ -43,11 +45,13 @@ public class TeamModel
     {
         return teamList;
     }
-
     /*public ArrayList<Team> getGroupA()
     {
         return groupA;
     }*/
+    
+    
+    
     
     public ObservableList<Team> getGroupA() // Used
     { ObservableList<Team> teams = FXCollections.observableArrayList();
@@ -67,17 +71,29 @@ public class TeamModel
     }
     
 
-    public ArrayList<Team> getGroupC()
+    public ObservableList<Team> getGroupC()
     {
-        return groupC;
+        ObservableList<Team> teams = FXCollections.observableArrayList();
+        for (int i = 8; i < 12; i++)
+        {
+            teams.add(teamList.get(i));
+        }
+        return teams;
+        
     }
 
-    public ArrayList<Team> getGroupD()
+    public ObservableList<Team> getGroupD()
     {
-        return groupD;
+        ObservableList<Team> teams = FXCollections.observableArrayList();
+        for (int i = 12; i < 1; i++)
+        {
+            teams.add(teamList.get(i));
+        }
+        return teams;
+      
     }
 
-    public ArrayList<ArrayList<Team>> getGroups() //not Used
+    /*public ArrayList<ArrayList<Team>> getGroups() //not Used
     {
 
         Groups.add(groupA);
@@ -86,14 +102,14 @@ public class TeamModel
         Groups.add(groupD);
         return Groups;
     }
-
+*/
     //Singleton
     public static TeamModel getTeamModel()
     {
         return TEAMMODEL;
     }
 
-    public void generateGroups() //Not Used
+    /*public void generateGroups() //Not Used
     {
 
         boolean checkNumber = true;
@@ -129,6 +145,7 @@ public class TeamModel
             }
 
         }
+*/
     }
 
-}
+

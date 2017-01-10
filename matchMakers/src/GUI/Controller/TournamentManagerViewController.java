@@ -62,10 +62,12 @@ public class TournamentManagerViewController implements Initializable
     private TableColumn<Team, String> clmTeamName;
     @FXML
     private TableColumn<Team, String> clmTeamId;
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
+       
           for (int i = 0; i < 12; i++) {
           teamModel.getTeams().add(new Team(i, i+""));
             

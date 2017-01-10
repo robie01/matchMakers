@@ -5,10 +5,12 @@
  */
 package GUI.Controller;
 
+import GUI.Model.GroupModel;
 import BE.Team;
 import GUI.Model.TeamModel;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -40,10 +42,8 @@ public class MainView1Controller implements Initializable {
     private Button groupR;
 
 
-
-   
     private TeamModel teamModel = TeamModel.getTeamModel();    
-    private TableView<Team> groupMatch;
+    //private TableView<Team> groupMatch;
     @FXML
     private ListView<Team> listA;
     @FXML
@@ -52,6 +52,7 @@ public class MainView1Controller implements Initializable {
     private ListView<Team> listC;
     @FXML
     private ListView<Team> listB;
+    
   
 
     
@@ -64,11 +65,9 @@ public class MainView1Controller implements Initializable {
        listA.setItems(teamModel.getGroupA());
        listB.setItems(teamModel.getGroupB());
        
-       
-      
-       
-       
-    }    
+        }   
+    
+  
 
     @FXML
     private void teamSAction(ActionEvent event) {
@@ -99,9 +98,8 @@ public class MainView1Controller implements Initializable {
     
     
     
-    public void displayGroupA() {
-        teamModel.getGroupA();
+    
         
     }
     
-}
+
