@@ -51,8 +51,9 @@ public class Team
     }
     @Override
     public String toString() {
-        return name + " Id: " + id;
+        return "name:"+ name + "\t" +"\t" + " Id: " + id;
     }
+    
     
     
 } 

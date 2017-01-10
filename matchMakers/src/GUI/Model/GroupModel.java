@@ -5,24 +5,66 @@
  */
 package GUI.Model;
 
+import BE.Team;
+import GUI.Model.TeamModel;
+import java.util.ArrayList;
+import java.util.Collections;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+
 /**
  *
- * @author EdwinSilva
+ * @author robiesun
  */
 public class GroupModel {
-/*    
-ListView<Team> listA;
-ListView<Team> listB;
-ListView<Team> listC;
-ListView<Team> listD;
-private ArrayList<ListView> lists = new ArrayList<>();
-
-    public GroupModel() {
-    lists.add(listA);
-    lists.add(listB);
-    lists.add(listC);
-    lists.add(listD);
     
-    }
- */
+  private static final GroupModel groupModel = new GroupModel();
+  private ArrayList<Team> list =  new ArrayList<Team>();
+  
+  private ArrayList<Team> listA =  new ArrayList<Team>();
+  private ArrayList<Team> listB =  new ArrayList<Team>();
+  private ArrayList<Team> listC =  new ArrayList<Team>();
+  private ArrayList<Team> listD =  new ArrayList<Team>();
+  private TeamModel teamModel = TeamModel.getTeamModel();
+  
+      
+      ArrayList<ArrayList<Team>> allGroups = new ArrayList<>();
+ 
+  
+  
+  private GroupModel()
+  {
+  }
+  public static GroupModel getGroupModel(){
+  return groupModel;
+  }
+  public void addTeamToGroup()
+  {
+      
+      allGroups.add(listA);
+      allGroups.add(listB);
+      allGroups.add(listC);
+      allGroups.add(listD);
+      
+      list.clear();
+      list.addAll(teamModel.getTeams());
+      Collections.shuffle(list);
+      int count = 0;
+      for (Team team : list) 
+      {
+          System.out.println(team.getName() + " " + count + "");
+          allGroups.get(count).add(team);
+          if(count == 3)
+          {
+           count = -1;  
+          }
+         count++;
+      }
+      System.out.println("Done");
+  }
+  public ArrayList<ArrayList<Team>> getAllGroups(){
+    return allGroups;
+  }
+   
 }

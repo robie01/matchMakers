@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,15 +26,14 @@ import javafx.scene.control.TableView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-
 /**
  * FXML Controller class
  *
  * @author robiesun
  */
-public class MainView1Controller implements Initializable {
+public class MainView1Controller implements Initializable
+{
 
-    
     @FXML
     private Button teamS;
     @FXML
@@ -41,8 +41,9 @@ public class MainView1Controller implements Initializable {
     @FXML
     private Button groupR;
 
+    private GroupModel groupModel = GroupModel.getGroupModel();
 
-    private TeamModel teamModel = TeamModel.getTeamModel();    
+    private TeamModel teamModel = TeamModel.getTeamModel();
     //private TableView<Team> groupMatch;
     @FXML
     private ListView<Team> listA;
@@ -52,54 +53,55 @@ public class MainView1Controller implements Initializable {
     private ListView<Team> listC;
     @FXML
     private ListView<Team> listB;
-    
-  
 
-    
-     
-     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-      
- 
-       listA.setItems(teamModel.getGroupA());
-       listB.setItems(teamModel.getGroupB());
-       
-        }   
-    
-  
-
-    @FXML
-    private void teamSAction(ActionEvent event) {
-        
-    }
-
-    @FXML
-    private void matchSAction(ActionEvent event) throws IOException {
-        
-         Stage stage; 
-         Parent root;
- 
-    if(event.getSource()==matchS)
+    public void initialize(URL url, ResourceBundle rb)
     {
-     stage = new Stage();
-     root = FXMLLoader.load(getClass().getResource("/GUI/View/Finals.fxml"));
-     stage.setScene(new Scene(root));
-     stage.setTitle("Finals");
-     stage.initModality(Modality.APPLICATION_MODAL);
-     stage.initOwner(matchS.getScene().getWindow());
-     stage.showAndWait();
-    }
+
+        groupModel.addTeamToGroup();
+        displayGroups();
     }
 
     @FXML
-    private void groupRankAction(ActionEvent event) {
-    }
-    
-    
-    
-    
-        
-    }
-    
+    private void teamSAction(ActionEvent event)
+    {
 
+    }
+
+    @FXML
+    private void matchSAction(ActionEvent event) throws IOException
+    {
+
+        Stage stage;
+        Parent root;
+
+        if (event.getSource() == matchS)
+        {
+            stage = new Stage();
+            root = FXMLLoader.load(getClass().getResource("/GUI/View/Finals.fxml"));
+            stage.setScene(new Scene(root));
+            stage.setTitle("Finals");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(matchS.getScene().getWindow());
+            stage.showAndWait();
+        }
+    }
+
+    @FXML
+    private void groupRankAction(ActionEvent event)
+    {
+    }
+
+    public void displayGroups()
+    {
+
+        listA.setItems(FXCollections.observableArrayList(groupModel.getAllGroups().get(0)));
+
+        listB.setItems(FXCollections.observableArrayList(groupModel.getAllGroups().get(1)));
+
+        listC.setItems(FXCollections.observableArrayList(groupModel.getAllGroups().get(2)));
+
+        listD.setItems(FXCollections.observableArrayList(groupModel.getAllGroups().get(3)));
+    }
+
+}
