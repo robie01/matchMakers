@@ -7,7 +7,9 @@ package GUI.Model;
 
 import BE.Group;
 import BE.Team;
+import com.sun.org.apache.xpath.internal.axes.SubContextList;
 import java.util.ArrayList;
+import java.util.Observable;
 import java.util.Random;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -46,21 +48,23 @@ public class TeamModel
     {
         return groupA;
     }*/
+    ObservableList<Team> teams = FXCollections.observableArrayList();
     public ObservableList<Team> getGroupA() // Used
     {
-        teamList.get(1);
-        teamList.get(2);
-        teamList.get(3);
-        teamList.get(4);
-        
-        return teamList;
-        
+        for (int i = 0; i < 4; i++)
+        {
+            teams.add(teamList.get(i));
+        }
+        return teams;
     }
-
-    public ArrayList<Team> getGroupB()
-    {
-        return groupB;
+    public ObservableList<Team> getGroupB() {
+        for (int i = 4; i < 8; i++)
+        {
+            teams.add(teamList.get(i));
+        }
+        return teams;
     }
+    
 
     public ArrayList<Team> getGroupC()
     {

@@ -76,7 +76,7 @@ public class TournamentManagerViewController implements Initializable
     private void generatebtnAction(ActionEvent event)
     {
 
-        if (teamCount == 5 || teamCount == 5)
+        if (teamCount >= 12 || teamCount <= 16)
         {
 
             Stage stage = null;

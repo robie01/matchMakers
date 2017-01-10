@@ -61,7 +61,13 @@ public class MainView1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        groupAColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+       groupBColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+       groupCColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+       groupDColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
        groupMatch.setItems(teamModel.getGroupA());
+       groupMatch.setItems(teamModel.getGroupB());
+       
+       
       
        
        
