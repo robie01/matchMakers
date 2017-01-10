@@ -5,11 +5,13 @@
  */
 package GUI.Controller;
 
+import BE.Group;
 import BE.Team;
-import BLL.GroupMatch;
+import GUI.Model.TeamModel;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,10 +20,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
 
 /**
  * FXML Controller class
@@ -30,33 +35,48 @@ import javafx.stage.Stage;
  */
 public class MainView1Controller implements Initializable {
 
-    @FXML
-    private TableView<String> groupMatch;
+    
     @FXML
     private Button teamS;
     @FXML
     private Button matchS;
     @FXML
     private Button groupR;
-    @FXML
-    private TableColumn<?, ?> clmGroupA;
-    @FXML
-    private TableColumn<?, ?> clmGroupB;
-    @FXML
-    private TableColumn<?, ?> clmGroupC;
-    @FXML
-    private TableColumn<?, ?> clmGroupD;
+
+
 
    
+    private TeamModel teamModel = TeamModel.getTeamModel();    
+    private TableView<Team> groupMatch;
+    @FXML
+    private ListView<Team> listA;
+    @FXML
+    private ListView<Team> listD;
+    @FXML
+    private ListView<Team> listC;
+    @FXML
+    private ListView<Team> listB;
+  
+
+    
      
      
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+      
+ 
+       listA.setItems(teamModel.getGroupA());
+       listB.setItems(teamModel.getGroupB());
+       
+       
+      
+       
        
     }    
 
     @FXML
     private void teamSAction(ActionEvent event) {
+        
     }
 
     @FXML
@@ -81,9 +101,11 @@ public class MainView1Controller implements Initializable {
     private void groupRankAction(ActionEvent event) {
     }
     
-    public void setTeamList(ObservableList<Team> teamList) {
+    
+    
+    public void displayGroupA() {
+        teamModel.getGroupA();
         
     }
-    
     
 }

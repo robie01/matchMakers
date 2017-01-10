@@ -12,14 +12,16 @@ package BE;
 public class Team
 {
     private int id;
-    private String tName;
+    private String name;
+    private String group;
+
     
     
      
-    public Team(int id, String name)
+    public Team(int id ,String name)
     {
         this.id = id;
-        this.tName = name;
+        this.name = name;
     }
 
     public int getId() {
@@ -31,17 +33,25 @@ public class Team
         this.id = id;
     }
 
-    public String gettName() {
-        return tName;
+    public String getName() {
+        return name;
     }
 
-    public void settName(String name) {
-        this.tName = name;
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getGroup()
+    {
+        return group;
     }
 
+    public void setGroup(String group)
+    {
+        this.group = group;
+    }
     @Override
     public String toString() {
-        return id + " " + tName;
+        return name + " Id: " + id;
     }
     
     
