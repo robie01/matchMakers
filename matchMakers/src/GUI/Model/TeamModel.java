@@ -5,7 +5,7 @@
  */
 package GUI.Model;
 
-import BE.Group;
+
 import BE.Team;
 import com.sun.org.apache.xpath.internal.axes.SubContextList;
 import java.util.ArrayList;

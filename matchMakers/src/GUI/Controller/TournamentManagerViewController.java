@@ -5,7 +5,7 @@
  */
 package GUI.Controller;
 
-import BE.Group;
+
 import BE.Team;
 import GUI.Model.TeamModel;
 
