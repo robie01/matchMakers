@@ -22,10 +22,7 @@ public Match( Team homeTeam, Team awayteam, int matchID, int round, int homeScor
     this.matchID = matchID;
     this.round = round;
     
-    hTeamName = this.hTeamName;
-    aTeamName = this.aTeamName;
     
-            
     
 }
 

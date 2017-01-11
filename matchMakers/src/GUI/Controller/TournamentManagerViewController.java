@@ -31,6 +31,7 @@ import javafx.stage.Stage;
 
 /**
  *
+ * 
  * @author Masoud
  */
 public class TournamentManagerViewController implements Initializable
@@ -124,7 +125,7 @@ public class TournamentManagerViewController implements Initializable
             teamcountlbl.setText("" + ++teamCount);
             txtField.clear();
             warningSign.setText("");
-            System.out.print(teamModel.getTeams());
+            
 
         } else
         {

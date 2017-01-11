@@ -29,12 +29,7 @@ public class TeamModel
 
     private ObservableList<Team> teamList = FXCollections.observableArrayList();
 
- /* private ArrayList<Team> groupA = new ArrayList<>();
-    private ArrayList<Team> groupB = new ArrayList<>();
-    private ArrayList<Team> groupC = new ArrayList<>();
-    private ArrayList<Team> groupD = new ArrayList<>();
-    private ArrayList<ArrayList<Team>> Groups = new ArrayList<>();
-*/
+ 
     //singleton
     private TeamModel()
     {
@@ -45,107 +40,15 @@ public class TeamModel
     {
         return teamList;
     }
-    /*public ArrayList<Team> getGroupA()
-    {
-        return groupA;
-    }*/
     
-    
-    
-    
-    public ObservableList<Team> getGroupA() // Used
-    { ObservableList<Team> teams = FXCollections.observableArrayList();
-        for (int i = 0; i < 4; i++)
-        {
-            teams.add(teamList.get(i));
-        }
-        return teams;
-    }
-    public ObservableList<Team> getGroupB() {
-        ObservableList<Team> teams = FXCollections.observableArrayList();
-        for (int i = 4; i < 8; i++)
-        {
-            teams.add(teamList.get(i));
-        }
-        return teams;
-    }
-    
-
-    public ObservableList<Team> getGroupC()
-    {
-        ObservableList<Team> teams = FXCollections.observableArrayList();
-        for (int i = 8; i < 12; i++)
-        {
-            teams.add(teamList.get(i));
-        }
-        return teams;
-        
-    }
-
-    public ObservableList<Team> getGroupD()
-    {
-        ObservableList<Team> teams = FXCollections.observableArrayList();
-        for (int i = 12; i < 1; i++)
-        {
-            teams.add(teamList.get(i));
-        }
-        return teams;
-      
-    }
-
-    /*public ArrayList<ArrayList<Team>> getGroups() //not Used
-    {
-
-        Groups.add(groupA);
-        Groups.add(groupB);
-        Groups.add(groupC);
-        Groups.add(groupD);
-        return Groups;
-    }
-*/
+  
     //Singleton
     public static TeamModel getTeamModel()
     {
         return TEAMMODEL;
     }
 
-    /*public void generateGroups() //Not Used
-    {
-
-        boolean checkNumber = true;
-        for (Team teams : teamList)
-        {
-
-            while (checkNumber == true)
-            {
-
-                if (groupA.size() != 4)
-                {
-                    teams.setGroup("A");
-                    groupA.add(teams);
-                    checkNumber = false;
-                } else if (groupB.size() != 4)
-                {
-                    teams.setGroup("B");
-                    groupB.add(teams);
-                    checkNumber = false;
-                } else if (groupC.size() != 4)
-                {
-                    teams.setGroup("C");
-                    groupC.add(teams);
-                    checkNumber = false;
-
-                } else if (groupD.size() != 4)
-                {
-                    teams.setGroup("D");
-                    groupC.add(teams);
-                    checkNumber = false;
-                }
-
-            }
-
-        }
-*/
+    
     }
 
 

@@ -27,10 +27,10 @@ public class GroupModel
     private ArrayList<Team> listC = new ArrayList<Team>();
     private ArrayList<Team> listD = new ArrayList<Team>();
     private TeamModel teamModel = TeamModel.getTeamModel();
-
+   
     ArrayList<ArrayList<Team>> allGroups = new ArrayList<>();
 
-    private GroupModel()
+    public GroupModel()
     {
 
     }
