@@ -15,7 +15,7 @@ private Team homeTeam, awayTeam;
 private int homeScore, awayScore, matchID, round; 
 private String hTeamName, aTeamName;
 
-public Match( Team homeTeam, Team awayteam, int matchID, int round ) {
+public Match( Team homeTeam, Team awayteam, int matchID, int round, int homeScore, int awayScore) {
 
     this.homeTeam = homeTeam;
     this.awayTeam = awayteam;
@@ -93,7 +93,12 @@ public Match( Team homeTeam, Team awayteam, int matchID, int round ) {
         this.aTeamName = aTeamName;
     }
 
+@Override
+    public String toString(){
+        return "HomeTeam:" + homeTeam +"/t" + homeScore +":"+ awayScore + "/t"+ "AwayTeam" + awayTeam +"/t"+ matchID; 
     
+        
+    }
     
     
     
