@@ -69,9 +69,23 @@ public class TournamentManagerViewController implements Initializable
     public void initialize(URL url, ResourceBundle rb)
     {
        
-          for (int i = 0; i < 12; i++) { /////////////// TEST //////////////
-          teamModel.getTeams().add(new Team(i, i+""));
-}
+            /////////////// TEST //////////////
+          teamModel.getTeams().add(new Team(1, "Fc Barcelona"));
+          teamModel.getTeams().add(new Team(2, "Fc Milan"));
+          teamModel.getTeams().add(new Team(3, "Fc John"));
+          teamModel.getTeams().add(new Team(4, "Fc Cat"));
+          teamModel.getTeams().add(new Team(5, "Fc Dog"));
+          teamModel.getTeams().add(new Team(6, "Fc Chair"));
+          teamModel.getTeams().add(new Team(7, "Fc Hat"));
+          teamModel.getTeams().add(new Team(8, "Fc Ground"));
+          teamModel.getTeams().add(new Team(9, "Fc Fire"));
+          teamModel.getTeams().add(new Team(10, "Fc handsome"));
+          teamModel.getTeams().add(new Team(11, "Fc sad"));
+          teamModel.getTeams().add(new Team(12, "Fc Frustrated"));
+          teamModel.getTeams().add(new Team(13, "Fc Banging"));
+          teamModel.getTeams().add(new Team(14, "Fc HOT AF"));
+          teamModel.getTeams().add(new Team(15, "Fc IDK"));
+          teamModel.getTeams().add(new Team(16, "Fc United States"));
           
           
         clmTeamId.setCellValueFactory(new PropertyValueFactory<>("id"));

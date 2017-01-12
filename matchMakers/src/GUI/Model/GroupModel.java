@@ -42,6 +42,7 @@ public class GroupModel
 
     public ArrayList<Team> getListA()
     {
+        
         return listA;
     }
 
@@ -66,6 +67,7 @@ public class GroupModel
         return listD;
     }
 
+    
     
 
     public void addTeamToGroup()

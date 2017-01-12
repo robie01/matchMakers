@@ -83,8 +83,7 @@ public Match( Team homeTeam, Team awayteam, int matchID) {
 @Override
     public String toString(){
         return "HomeTeam:" + homeTeam + "AwayTeam" + awayTeam +"/t"+ matchID; 
-    
-        
+       
     }
     
     
