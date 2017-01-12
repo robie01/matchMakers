@@ -128,7 +128,7 @@ public class MainView1Controller implements Initializable
     
 if(event.getSource()==btnRanking){
     stage = new Stage();
-    root = FXMLLoader.load(getClass().getResource("/GUI/View/Ranking.fxml"));
+    root = FXMLLoader.load(getClass().getResource("/GUI/View/Rankings.fxml"));
     stage.setScene(new Scene(root));
     stage.setTitle("Group Ranking");
     stage.initModality(Modality.APPLICATION_MODAL);
