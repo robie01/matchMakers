@@ -82,10 +82,7 @@ public class TournamentManagerViewController implements Initializable
           teamModel.getTeams().add(new Team(10, "Fc handsome"));
           teamModel.getTeams().add(new Team(11, "Fc sad"));
           teamModel.getTeams().add(new Team(12, "Fc Frustrated"));
-          teamModel.getTeams().add(new Team(13, "Fc Banging"));
-          teamModel.getTeams().add(new Team(14, "Fc HOT AF"));
-          teamModel.getTeams().add(new Team(15, "Fc IDK"));
-          teamModel.getTeams().add(new Team(16, "Fc United States"));
+          ////////////////////TEST//////////////////
           
           
         clmTeamId.setCellValueFactory(new PropertyValueFactory<>("id"));
