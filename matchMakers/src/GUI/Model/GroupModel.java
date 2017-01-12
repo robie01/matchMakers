@@ -22,15 +22,15 @@ public class GroupModel
     private static final GroupModel groupModel = new GroupModel();
     private ArrayList<Team> list = new ArrayList<Team>();
 
-    private ArrayList<Team> listA = new ArrayList<Team>();
-    private ArrayList<Team> listB = new ArrayList<Team>();
-    private ArrayList<Team> listC = new ArrayList<Team>();
-    private ArrayList<Team> listD = new ArrayList<Team>();
-    private TeamModel teamModel = TeamModel.getTeamModel();
+    private final ArrayList<Team> listA = new ArrayList<Team>();
+    private final ArrayList<Team> listB = new ArrayList<Team>();
+    private final ArrayList<Team> listC = new ArrayList<Team>();
+    private final ArrayList<Team> listD = new ArrayList<Team>();
+    private final TeamModel teamModel = TeamModel.getTeamModel();
    
     ArrayList<ArrayList<Team>> allGroups = new ArrayList<>();
 
-    public GroupModel()
+    private GroupModel()
     {
 
     }
@@ -39,6 +39,34 @@ public class GroupModel
     {
         return groupModel;
     }
+
+    public ArrayList<Team> getListA()
+    {
+        return listA;
+    }
+
+   
+
+    public ArrayList<Team> getListB()
+    {
+        return listB;
+    }
+
+    
+
+    public ArrayList<Team> getListC()
+    {
+        return listC;
+    }
+
+    
+
+    public ArrayList<Team> getListD()
+    {
+        return listD;
+    }
+
+    
 
     public void addTeamToGroup()
     {
@@ -54,7 +82,7 @@ public class GroupModel
         int count = 0;
         for (Team team : list)
         {
-            System.out.println(team.getName() + " " + count + "");
+            
             allGroups.get(count).add(team);
             if (count == 3)
             {

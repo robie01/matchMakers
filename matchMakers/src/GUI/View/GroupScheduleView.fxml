@@ -6,36 +6,40 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1076.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.GroupScheduleViewController">
    <children>
-      <TableView fx:id="tblViewA" layoutX="32.0" prefHeight="400.0" prefWidth="471.0">
+      <TableView fx:id="tblViewA" layoutX="-1.0" prefHeight="400.0" prefWidth="512.0">
         <columns>
-          <TableColumn fx:id="clmHomeTeamA" prefWidth="130.0" text="Home Team" />
-          <TableColumn fx:id="clmGoalA" prefWidth="91.0" text="Goal" />
-            <TableColumn fx:id="clmGuestTeamA" prefWidth="152.0" text="Guest Team" />
-            <TableColumn fx:id="clmMatchIDA" prefWidth="95.0" text="Match ID's" />
+          <TableColumn fx:id="clmHomeTeamA" prefWidth="161.0" text="Home Team" />
+          <TableColumn fx:id="clmHGoalA" prefWidth="69.0" text="H" />
+            <TableColumn fx:id="clmGGoalA" prefWidth="66.0" text="G" />
+            <TableColumn fx:id="clmGuestTeamA" prefWidth="128.0" text="Guest Team" />
+            <TableColumn fx:id="clmMatchIDA" prefWidth="84.0" text="Match ID's" />
         </columns>
       </TableView>
-      <TableView fx:id="tblViewB" layoutX="538.0" prefHeight="400.0" prefWidth="492.0">
+      <TableView fx:id="tblViewB" layoutX="572.0" prefHeight="400.0" prefWidth="504.0">
         <columns>
-          <TableColumn fx:id="clmHomeTeamB" prefWidth="158.0" text="Home Team" />
-          <TableColumn fx:id="clmGoalB" prefWidth="90.0" text="Goal" />
-            <TableColumn fx:id="clmGuestTeamB" prefWidth="153.0" text="Guest Team" />
-            <TableColumn fx:id="clmMatchIDB" prefWidth="90.0" text="Match ID's" />
+          <TableColumn fx:id="clmHomeTeamB" prefWidth="143.0" text="Home Team" />
+          <TableColumn fx:id="clmHGoalB" prefWidth="63.0" text="H" />
+            <TableColumn fx:id="clmGGoalB" prefWidth="67.0" text="G" />
+            <TableColumn fx:id="clmGuestTeamB" prefWidth="132.0" text="Guest Team" />
+            <TableColumn fx:id="clmMatchIDB" prefWidth="98.0" text="Match ID's" />
         </columns>
       </TableView>
-      <TableView fx:id="tblViewC" layoutX="32.0" layoutY="430.0" prefHeight="351.0" prefWidth="471.0">
+      <TableView fx:id="tblViewC" layoutX="-1.0" layoutY="430.0" prefHeight="351.0" prefWidth="512.0">
         <columns>
-          <TableColumn fx:id="clmHomeTeamC" prefWidth="148.0" text="Home Team" />
-          <TableColumn fx:id="clmGoalC" prefWidth="79.0" text="Goal" />
-            <TableColumn fx:id="clmGuestTeamC" prefWidth="150.0" text="Guest Team" />
-            <TableColumn fx:id="clmMatchIDC" prefWidth="93.0" text="Match ID's" />
+          <TableColumn fx:id="clmHomeTeamC" prefWidth="163.0" text="Home Team" />
+          <TableColumn fx:id="clmHGoalC" prefWidth="63.0" text="H" />
+            <TableColumn fx:id="clmGGoalC" prefWidth="61.0" text="G" />
+            <TableColumn fx:id="clmGuestTeamC" prefWidth="136.0" text="Guest Team" />
+            <TableColumn fx:id="clmMatchIDC" prefWidth="86.0" text="Match ID's" />
         </columns>
       </TableView>
-      <TableView fx:id="tblViewD" layoutX="535.0" layoutY="429.0" prefHeight="351.0" prefWidth="492.0">
+      <TableView fx:id="tblViewD" layoutX="574.0" layoutY="430.0" prefHeight="351.0" prefWidth="496.0">
         <columns>
-          <TableColumn fx:id="clmHomeTeamD" prefWidth="173.0" text="Home Team" />
-          <TableColumn fx:id="clmGoalD" prefWidth="77.0" text="Goal" />
-            <TableColumn fx:id="clmGuestTeamD" prefWidth="149.0" text="Guest Team" />
-            <TableColumn fx:id="clmMatchIDD" prefWidth="92.0" text="Match ID's" />
+          <TableColumn fx:id="clmHomeTeamD" prefWidth="139.0" text="Home Team" />
+          <TableColumn fx:id="clmHGoalD" prefWidth="54.0" text="H" />
+            <TableColumn fx:id="clmGGoalD" prefWidth="64.0" text="G" />
+            <TableColumn fx:id="clmGuestTeamD" prefWidth="142.0" text="Guest Team" />
+            <TableColumn fx:id="clmMatchIDD" prefWidth="96.0" text="Match ID's" />
         </columns>
       </TableView>
    </children>

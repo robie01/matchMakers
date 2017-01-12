@@ -15,14 +15,11 @@ private Team homeTeam, awayTeam;
 private int homeScore, awayScore, matchID, round; 
 private String hTeamName, aTeamName;
 
-public Match( Team homeTeam, Team awayteam, int matchID, int round, int homeScore, int awayScore) {
+public Match( Team homeTeam, Team awayteam, int matchID) {
 
     this.homeTeam = homeTeam;
     this.awayTeam = awayteam;
     this.matchID = matchID;
-    this.round = round;
-    
-    
     
 }
 
@@ -66,13 +63,6 @@ public Match( Team homeTeam, Team awayteam, int matchID, int round, int homeScor
         this.matchID = matchID;
     }
 
-    public int getRound() {
-        return round;
-    }
-
-    public void setRound(int round) {
-        this.round = round;
-    }
 
     public String gethTeamName() {
         return hTeamName;
@@ -92,7 +82,7 @@ public Match( Team homeTeam, Team awayteam, int matchID, int round, int homeScor
 
 @Override
     public String toString(){
-        return "HomeTeam:" + homeTeam +"/t" + homeScore +":"+ awayScore + "/t"+ "AwayTeam" + awayTeam +"/t"+ matchID; 
+        return "HomeTeam:" + homeTeam + "AwayTeam" + awayTeam +"/t"+ matchID; 
     
         
     }

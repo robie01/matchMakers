@@ -25,13 +25,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
  
 public class GroupScheduleViewController implements Initializable
 {
-    private GroupModel groupModel = new GroupModel();
+    private GroupModel groupModel = GroupModel.getGroupModel();
     @FXML
     private TableView<Match> tblViewA;
     @FXML
     private TableColumn<Match, String> clmHomeTeamA;
-    @FXML
-    private TableColumn<Match, String> clmGoalA;
     @FXML
     private TableColumn<Match, String> clmGuestTeamA;
     @FXML
@@ -41,8 +39,6 @@ public class GroupScheduleViewController implements Initializable
     @FXML
     private TableColumn<Match, String> clmHomeTeamB;
     @FXML
-    private TableColumn<Match, String> clmGoalB;
-    @FXML
     private TableColumn<Match, String> clmGuestTeamB;
     @FXML
     private TableColumn<Match, String> clmMatchIDB;
@@ -50,8 +46,6 @@ public class GroupScheduleViewController implements Initializable
     private TableView<Match> tblViewC;
     @FXML
     private TableColumn<Match, String> clmHomeTeamC;
-    @FXML
-    private TableColumn<Match, String> clmGoalC;
     @FXML
     private TableColumn<Match, String> clmGuestTeamC;
     @FXML
@@ -61,11 +55,25 @@ public class GroupScheduleViewController implements Initializable
     @FXML
     private TableColumn<Match, String> clmHomeTeamD;
     @FXML
-    private TableColumn<Match, String> clmGoalD;
-    @FXML
     private TableColumn<Match, String> clmGuestTeamD;
     @FXML
     private TableColumn<Match, String> clmMatchIDD;
+    @FXML
+    private TableColumn<Match, String> clmHGoalA;
+    @FXML
+    private TableColumn<Match, String> clmGGoalA;
+    @FXML
+    private TableColumn<Match, String> clmHGoalB;
+    @FXML
+    private TableColumn<Match, String> clmGGoalB;
+    @FXML
+    private TableColumn<Match, String> clmHGoalC;
+    @FXML
+    private TableColumn<Match, String> clmGGoalC;
+    @FXML
+    private TableColumn<Match, String> clmHGoalD;
+    @FXML
+    private TableColumn<Match, String> clmGGoalD;
 
     /**
      * Initializes the controller class.
@@ -75,8 +83,23 @@ public class GroupScheduleViewController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        clmHomeTeamA.setCellValueFactory(new PropertyValueFactory<>("hometeam"));
-        clmHomeTeamB.setCellValueFactory(new PropertyValueFactory<>("hometeam"));
+        clmHomeTeamA.setCellValueFactory(new PropertyValueFactory<>("homeTeam"));
+        clmGuestTeamA.setCellValueFactory(new PropertyValueFactory<>("awayTeam"));
+        clmHGoalA.setCellValueFactory(new PropertyValueFactory<>("homeScore"));
+        clmGGoalA.setCellValueFactory(new PropertyValueFactory<>("awayScore"));
+        clmMatchIDA.setCellValueFactory(new PropertyValueFactory<>("matchID"));
+        
+        
+        //groupModel.getListA().
+        
+        
+        
+        
+        
+       
+        
+        
+        
         
     }    
     
