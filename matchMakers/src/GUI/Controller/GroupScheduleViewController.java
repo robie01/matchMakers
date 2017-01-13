@@ -11,26 +11,34 @@ import BE.Round;
 import GUI.Model.GroupModel;
 import GUI.Model.TeamModel;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Observable;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sun.reflect.generics.parser.SignatureParser;
 
 /**
  * FXML Controller class
  *
  * @author Jesper Enemark
  */
- 
 public class GroupScheduleViewController implements Initializable
 {
+
     private GroupModel groupModel = GroupModel.getGroupModel();
     private TeamModel teamModel = TeamModel.getTeamModel();
+
     @FXML
     private TableView<Match> tblViewA;
     @FXML
@@ -79,50 +87,83 @@ public class GroupScheduleViewController implements Initializable
     private TableColumn<Match, String> clmHGoalD;
     @FXML
     private TableColumn<Match, String> clmGGoalD;
+    @FXML
+    private TextField txtHomeScore;
+    @FXML
+    private TextField txtGuestScore;
+    @FXML
+    private TextField txtMatchId;
+    @FXML
+    private Button btnSetScore;
 
     /**
      * Initializes the controller class.
      */
-    public void firstRound() {
-        
-        
-        Match Match1 = new Match(groupModel.getListA().get(0), groupModel.getListA().get(1), 0);
-        //Match Match2 = new Match(groupModel.getListA().get(0), groupModel.getListA().get(1), 1);
-        //Match ds = new Match(groupModel.getListA().get(0), groupModel.getListA().get(1), 0);
-        }
-    
     @Override
     public void initialize(URL url, ResourceBundle rb)
+    {
+        showColumnGroupA();
+        showColumnGroupB();
+        showColumnGroupC();
+        showColumnGroupD();
+    }
+
+    public void showColumnGroupA()
     {
         clmHomeTeamA.setCellValueFactory(new PropertyValueFactory<>("homeTeam"));
         clmGuestTeamA.setCellValueFactory(new PropertyValueFactory<>("awayTeam"));
         clmHGoalA.setCellValueFactory(new PropertyValueFactory<>("homeScore"));
         clmGGoalA.setCellValueFactory(new PropertyValueFactory<>("awayScore"));
         clmMatchIDA.setCellValueFactory(new PropertyValueFactory<>("matchID"));
-        //clmHomeTeamA.setCellValueFactory(homeTeam -> { return homeTeam.getValue().setMatch1().matchIdProperty();});
-        //First Round
-        Match Match1 = new Match(groupModel.getListA().get(0), groupModel.getListA().get(1), 0);
-        Match Match2 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(2), 1);
-        //Second Round
-        Match Match3 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(3), 2);
-        Match Match4 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(0), 3);
-        //Third Round
-        Match Match5 = new Match(groupModel.getListA().get(2), groupModel.getListA().get(1), 4);
-        Match Match6 = new Match(groupModel.getListA().get(3), groupModel.getListA().get(1), 5);
-        //Fourth Round
-        Match Match7 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(0), 0);
-        Match Match8 = new Match(groupModel.getListA().get(2), groupModel.getListA().get(1), 1);
-        //Fifth Round
-        Match Match9 = new Match(groupModel.getListA().get(3), groupModel.getListA().get(1), 2);
-        Match Match10 = new Match(groupModel.getListA().get(0), groupModel.getListA().get(1), 3);
-        //Sixth Round
-        Match Match11 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(2), 4);
-        Match Match12 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(3), 5);
-        
-        tblViewA.setItems(FXCollections.observableArrayList(Match1, Match2, Match3, Match4, Match5, Match6, Match7, Match8, Match9, Match10, Match11, Match12));
-        
-        
-     
-    }    
+
+        tblViewA.setItems((FXCollections.observableArrayList(groupModel.getGroupAPlay())));
+        System.out.println(groupModel.getGroupAPlay());
+    }
+
+    public void showColumnGroupB()
+    {
+        clmHomeTeamB.setCellValueFactory(new PropertyValueFactory<>("homeTeam"));
+        clmGuestTeamB.setCellValueFactory(new PropertyValueFactory<>("awayTeam"));
+        clmHGoalB.setCellValueFactory(new PropertyValueFactory<>("homeScore"));
+        clmGGoalB.setCellValueFactory(new PropertyValueFactory<>("awayScore"));
+        clmMatchIDB.setCellValueFactory(new PropertyValueFactory<>("matchID"));
+
+        tblViewB.setItems(groupModel.GroupBPlay());
+
+    }
+
+    public void showColumnGroupC()
+    {
+        clmHomeTeamC.setCellValueFactory(new PropertyValueFactory<>("homeTeam"));
+        clmGuestTeamC.setCellValueFactory(new PropertyValueFactory<>("awayTeam"));
+        clmHGoalC.setCellValueFactory(new PropertyValueFactory<>("homeScore"));
+        clmGGoalC.setCellValueFactory(new PropertyValueFactory<>("awayScore"));
+        clmMatchIDC.setCellValueFactory(new PropertyValueFactory<>("matchID"));
+
+        tblViewC.setItems(groupModel.GroupCPlay());
+    }
+
+    public void showColumnGroupD()
+    {
+        clmHomeTeamD.setCellValueFactory(new PropertyValueFactory<>("homeTeam"));
+        clmGuestTeamD.setCellValueFactory(new PropertyValueFactory<>("awayTeam"));
+        clmHGoalD.setCellValueFactory(new PropertyValueFactory<>("homeScore"));
+        clmGGoalD.setCellValueFactory(new PropertyValueFactory<>("awayScore"));
+        clmMatchIDD.setCellValueFactory(new PropertyValueFactory<>("matchID"));
+
+        tblViewD.setItems(groupModel.GroupDPlay());
+    }
+
     
+
+    @FXML
+    private void actionEventSubmit(ActionEvent event)
+    {
+        int y = Integer.parseInt(txtMatchId.getText());
+        int x = Integer.parseInt(txtHomeScore.getText());
+        
+        //groupModel..get(y).setHomeScore(x);
+        
+    }
+
 }
