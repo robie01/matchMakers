@@ -24,8 +24,7 @@ public class TeamModel
 
     //singleton
     private static final TeamModel TEAMMODEL = new TeamModel();
-    //private static int smallestGroups = 3, biggestGroups = 4;
-    ArrayList<ListView> lists = new ArrayList<>();
+    
 
     private ObservableList<Team> teamList = FXCollections.observableArrayList();
     

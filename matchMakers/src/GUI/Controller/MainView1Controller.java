@@ -56,7 +56,7 @@ public class MainView1Controller implements Initializable
     private Button btnGroupMatch;
     @FXML
     private Button btnRanking;
-
+    
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
@@ -66,12 +66,12 @@ public class MainView1Controller implements Initializable
         displayGroups();
     }
 
-    @FXML
-    private void teamSAction(ActionEvent event) throws IOException
-    {
+    
+    
       
-    }
-
+    /*
+    * Set stage to finals.fxml
+    */
     @FXML
     private void matchSAction(ActionEvent event) throws IOException
     {
@@ -90,7 +90,9 @@ public class MainView1Controller implements Initializable
             stage.showAndWait();
         }
     }
-
+    /*
+    *Set the stage to GroupViewScheduleView.Fxml.
+    */
     @FXML
     private void groupMatchAction(ActionEvent event) throws IOException
     {
@@ -110,6 +112,7 @@ public class MainView1Controller implements Initializable
     }
     /*
     * This sets all the team names in each group. And each group is recognized from its index from 0-3.
+    This get an array from Groups and set them in a list.
     */
     public void displayGroups()
     {
@@ -123,7 +126,9 @@ public class MainView1Controller implements Initializable
 
         listD.setItems(FXCollections.observableArrayList(groupModel.getAllGroups().get(3)));
     }
-
+    /*
+    *This set stage to the Ranking.fxml.
+    */
     @FXML
     private void RankingAction(ActionEvent event) throws IOException {
     Stage stage;
