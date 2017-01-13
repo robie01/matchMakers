@@ -89,7 +89,7 @@ public class Team
     @Override
     public String toString()
     {
-        return name + "\t" + id + "\t" + "id";
+        return name + "ID:" + id;
     }
 
 }

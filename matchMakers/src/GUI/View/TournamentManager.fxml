@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TournamentManagerViewController">
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TournamentManagerViewController">
    <children>
       <Label layoutX="616.0" layoutY="47.0" text="Number of teams:" />
       <Label fx:id="teamcountlbl" layoutX="751.0" layoutY="47.0" prefHeight="17.0" prefWidth="52.0" text="0" />
@@ -16,10 +16,9 @@
          <font>
             <Font size="22.0" />
          </font></Label>
-      <Button fx:id="generatebtnID" layoutX="699.0" layoutY="581.0" mnemonicParsing="false" onAction="#generatebtnAction" text="Generate" />
+      <Button fx:id="generatebtnID" layoutX="634.0" layoutY="576.0" mnemonicParsing="false" onAction="#generatebtnAction" prefHeight="36.0" prefWidth="75.0" text="Generate" />
       <Button layoutX="406.0" layoutY="576.0" mnemonicParsing="false" onAction="#addbtnAction" prefHeight="35.0" prefWidth="71.0" text="Add" />
-      <Button fx:id="deletebtn" layoutX="604.0" layoutY="575.0" mnemonicParsing="false" onAction="#deletebtnAction" prefHeight="36.0" prefWidth="67.0" text="Delete" />
-      <Button fx:id="updateBtn" layoutX="498.0" layoutY="575.0" mnemonicParsing="false" onAction="#updateBtnAction" prefHeight="36.0" prefWidth="75.0" text="Update" />
+      <Button fx:id="deletebtn" layoutX="517.0" layoutY="576.0" mnemonicParsing="false" onAction="#deletebtnAction" prefHeight="36.0" prefWidth="67.0" text="Delete" />
       <Label fx:id="warningSign" layoutX="57.0" layoutY="620.0" prefHeight="35.0" prefWidth="318.0" />
       <TextField fx:id="txtField" layoutX="53.0" layoutY="577.0" prefHeight="34.0" prefWidth="326.0" />
       <TableView fx:id="tblTeams" layoutX="49.0" layoutY="82.0" prefHeight="460.0" prefWidth="762.0">
