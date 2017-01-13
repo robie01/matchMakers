@@ -5,11 +5,24 @@
  */
 package BLL;
 
+import BE.Team;
+import GUI.Model.GroupModel;
+import GUI.Model.TeamModel;
+import java.util.Collections;
+
 /**
  *
  * @author robiesun
  */
 public class GroupMatch {
+
+    public GroupMatch()
+    {
+    }
+    private GroupModel groupModel = GroupModel.getGroupModel();
+    private TeamModel teamModel = TeamModel.getTeamModel();
     
     
+    
+   
 }

@@ -13,7 +13,7 @@ public class Match {
     
 private Team homeTeam, awayTeam;
 private int homeScore, awayScore, matchID, round; 
-private String hTeamName, aTeamName;
+
 
 public Match( Team homeTeam, Team awayteam, int matchID) {
 
@@ -64,26 +64,12 @@ public Match( Team homeTeam, Team awayteam, int matchID) {
     }
 
 
-    public String gethTeamName() {
-        return hTeamName;
-    }
+   
 
-    public void sethTeamName(String hTeamName) {
-        this.hTeamName = hTeamName;
-    }
-
-    public String getaTeamName() {
-        return aTeamName;
-    }
-
-    public void setaTeamName(String aTeamName) {
-        this.aTeamName = aTeamName;
-    }
-
+    
 @Override
     public String toString(){
         return "HomeTeam:" + homeTeam + "AwayTeam" + awayTeam +"/t"+ matchID; 
-       
     }
     
     

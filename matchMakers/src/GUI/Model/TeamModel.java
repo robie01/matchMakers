@@ -28,7 +28,7 @@ public class TeamModel
     ArrayList<ListView> lists = new ArrayList<>();
 
     private ObservableList<Team> teamList = FXCollections.observableArrayList();
-
+    
  
     //singleton
     private TeamModel()
@@ -39,6 +39,7 @@ public class TeamModel
     public ObservableList<Team> getTeams()
     {
         return teamList;
+        
     }
     
   

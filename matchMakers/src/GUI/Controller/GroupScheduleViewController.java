@@ -6,27 +6,18 @@
 package GUI.Controller;
 
 import BE.Match;
-import BE.Team;
-import BE.Round;
 import GUI.Model.GroupModel;
 import GUI.Model.TeamModel;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Observable;
 import java.util.ResourceBundle;
-import javafx.beans.value.ChangeListener;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import sun.reflect.generics.parser.SignatureParser;
 
 /**
  * FXML Controller class
@@ -116,8 +107,8 @@ public class GroupScheduleViewController implements Initializable
         clmGGoalA.setCellValueFactory(new PropertyValueFactory<>("awayScore"));
         clmMatchIDA.setCellValueFactory(new PropertyValueFactory<>("matchID"));
 
-        tblViewA.setItems((FXCollections.observableArrayList(groupModel.getGroupAPlay())));
-        System.out.println(groupModel.getGroupAPlay());
+        tblViewA.setItems(groupModel.GroupAPlay());
+        
     }
 
     public void showColumnGroupB()
@@ -162,7 +153,8 @@ public class GroupScheduleViewController implements Initializable
         int y = Integer.parseInt(txtMatchId.getText());
         int x = Integer.parseInt(txtHomeScore.getText());
         
-        //groupModel..get(y).setHomeScore(x);
+        //groupModel.group
+        
         
     }
 

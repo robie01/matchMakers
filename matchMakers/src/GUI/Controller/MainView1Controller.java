@@ -62,7 +62,7 @@ public class MainView1Controller implements Initializable
     {
 
         
-        groupModel.addTeamToGroup();
+        groupModel.GroupArrangements();
         displayGroups();
     }
 

@@ -1,35 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.FinalsController">
    <children>
-      <TextField layoutX="30.0" layoutY="452.0" prefHeight="27.0" prefWidth="98.0" text="Group A - 1" />
-      <TextField layoutX="148.0" layoutY="452.0" prefHeight="27.0" prefWidth="48.0" />
-      <TextField layoutX="211.0" layoutY="452.0" prefHeight="27.0" prefWidth="104.0" text="Group B - 2" />
-      <TextField layoutX="344.0" layoutY="453.0" prefHeight="27.0" prefWidth="98.0" text="Group A - 2" />
-      <TextField layoutX="458.0" layoutY="453.0" prefHeight="27.0" prefWidth="48.0" />
-      <TextField layoutX="962.0" layoutY="452.0" prefHeight="27.0" prefWidth="79.0" text="Group -C - 2" />
-      <TextField layoutX="839.0" layoutY="452.0" prefHeight="27.0" prefWidth="101.0" text="Group D - 2" />
-      <TextField layoutX="775.0" layoutY="452.0" prefHeight="27.0" prefWidth="49.0" />
-      <TextField layoutX="652.0" layoutY="452.0" prefHeight="27.0" prefWidth="104.0" text="Group C - 1" />
-      <TextField layoutX="522.0" layoutY="453.0" prefHeight="27.0" prefWidth="98.0" text="Group B - 1 " />
-      <TextField layoutX="1112.0" layoutY="452.0" prefHeight="28.0" prefWidth="91.0" text="Group - D -1" />
-      <TextField layoutX="1052.0" layoutY="452.0" prefHeight="0.0" prefWidth="50.0" />
-      <TextField layoutX="79.0" layoutY="371.0" />
-      <TextField layoutX="383.0" layoutY="371.0" />
-      <TextField layoutX="704.0" layoutY="371.0" />
-      <TextField layoutX="994.0" layoutY="371.0" prefHeight="27.0" prefWidth="167.0" />
-      <TextField layoutX="276.0" layoutY="371.0" prefHeight="27.0" prefWidth="79.0" />
-      <TextField layoutX="226.0" layoutY="291.0" prefHeight="27.0" prefWidth="188.0" text=" " />
-      <TextField layoutX="571.0" layoutY="291.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="836.0" layoutY="291.0" prefHeight="27.0" prefWidth="188.0" />
-      <TextField layoutX="890.0" layoutY="371.0" prefHeight="27.0" prefWidth="79.0" />
+      <TextField fx:id="txtFirstQuarterFinalist" layoutX="30.0" layoutY="452.0" prefHeight="27.0" prefWidth="98.0" promptText="Group A - 1" />
+      <TextField fx:id="txtFirstQuarterGoal1" layoutX="139.0" layoutY="452.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txtSecondQuarterFinalist" layoutX="211.0" layoutY="452.0" prefHeight="27.0" prefWidth="104.0" promptText="Group B - 2" />
+      <TextField fx:id="txt3rdQuarterFinalist" layoutX="344.0" layoutY="453.0" prefHeight="27.0" prefWidth="98.0" promptText="Group A - 2" />
+      <TextField fx:id="txtSecondQuarterGoal2" layoutX="487.0" layoutY="453.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txt7thQuarterFinalist" layoutX="950.0" layoutY="452.0" prefHeight="31.0" prefWidth="91.0" promptText="Group -C - 2" />
+      <TextField fx:id="txt6thQuarterFinalist" layoutX="839.0" layoutY="452.0" prefHeight="27.0" prefWidth="101.0" promptText="Group D - 2" />
+      <TextField fx:id="txtThirdQuarterGoal1" layoutX="765.0" layoutY="452.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txt5thQuarterFinalist" layoutX="652.0" layoutY="452.0" prefHeight="27.0" prefWidth="104.0" promptText="Group C - 1" />
+      <TextField fx:id="txt4thQuarterFinals" layoutX="522.0" layoutY="453.0" prefHeight="27.0" prefWidth="98.0" promptText="Group B - 1 " />
+      <TextField fx:id="txt8thQuarterFinalist" layoutX="1112.0" layoutY="452.0" prefHeight="31.0" prefWidth="104.0" promptText="Group - D -1" />
+      <TextField fx:id="txtForthQuarterGoal1" layoutX="1052.0" layoutY="452.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txt1stSemiFinalist" layoutX="79.0" layoutY="371.0" />
+      <TextField fx:id="txt2ndSemiFinalist" layoutX="383.0" layoutY="371.0" />
+      <TextField fx:id="txt3rdSemiFinalist" layoutX="704.0" layoutY="371.0" />
+      <TextField fx:id="txt4thSemiFinalist" layoutX="994.0" layoutY="371.0" prefHeight="27.0" prefWidth="167.0" />
+      <TextField fx:id="txtFirstSemiGoal1" layoutX="289.0" layoutY="371.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txt1stFinalist" layoutX="226.0" layoutY="291.0" prefHeight="27.0" prefWidth="188.0" text=" " />
+      <TextField fx:id="txt2ndFinalist" layoutX="836.0" layoutY="291.0" prefHeight="27.0" prefWidth="188.0" />
+      <TextField fx:id="txt2ndsemiGoal2" layoutX="954.0" layoutY="371.0" prefHeight="31.0" prefWidth="26.0" />
       <TextField layoutX="587.0" layoutY="163.0" prefHeight="27.0" prefWidth="66.0" text="Winner" />
-      <TextField layoutX="542.0" layoutY="210.0" />
-      <TextField layoutX="570.0" layoutY="335.0" prefHeight="27.0" prefWidth="104.0" text="Semi-Finals" />
-      <TextField layoutX="591.0" layoutY="250.0" prefHeight="27.0" prefWidth="59.0" text="Finals" />
-      <TextField layoutX="568.0" layoutY="407.0" prefHeight="27.0" prefWidth="104.0" text="Qurater-Finals" />
+      <TextField fx:id="txtWinner" layoutX="532.0" layoutY="210.0" />
+      <Button layoutX="565.0" layoutY="408.0" mnemonicParsing="false" onAction="#btnquarterFinalEvent" prefHeight="31.0" prefWidth="120.0" text="Quarter-Finals" />
+      <Button layoutX="565.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnSemiEvent" prefHeight="31.0" prefWidth="120.0" text="Semi-Finals" />
+      <Button layoutX="562.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnFinalEvent" prefHeight="31.0" prefWidth="120.0" text="Finals" />
+      <TextField fx:id="txtFinalGoal1" layoutX="513.0" layoutY="291.0" prefHeight="31.0" prefWidth="47.0" />
+      <TextField fx:id="txtFirstQuarterGoal2" layoutX="173.0" layoutY="452.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txtSecondQuarterGoal1" layoutX="451.0" layoutY="452.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txtThirdQuarterGoal2" layoutX="798.0" layoutY="452.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txtForthQuarterGoal2" layoutX="1086.0" layoutY="452.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txt2ndsemiGoal1" layoutX="914.0" layoutY="371.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txtFirstSemiGoal2" layoutX="331.0" layoutY="371.0" prefHeight="31.0" prefWidth="26.0" />
+      <TextField fx:id="txtFinalGoal2" layoutX="681.0" layoutY="291.0" prefHeight="31.0" prefWidth="47.0" />
+      <Label layoutX="622.0" layoutY="296.0" prefHeight="21.0" prefWidth="33.0" text="-" />
    </children>
 </AnchorPane>

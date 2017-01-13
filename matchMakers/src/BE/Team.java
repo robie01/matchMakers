@@ -12,7 +12,7 @@ package BE;
 public class Team
 {
     private int id, point, goals, goalsLetIn, goalsDiff;
-    private String name, group;
+    private String name;
 
     
     
@@ -75,15 +75,6 @@ public class Team
         this.name = name;
     }
 
-    public String getGroup() {
-        return group;
-    }
-
-    public void setGroup(String group) {
-        this.group = group;
-    }
-
-    
     @Override
     public String toString() {
         return name + "\t" + id + "\t" + "id";
