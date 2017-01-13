@@ -65,38 +65,24 @@ public class TournamentManagerViewController implements Initializable
     @FXML
     private TableColumn<Team, String> clmTeamId;
     
-
+    /*
+    *When the view is initialized, the cells in the column is set to a given property, and teams it added to the TableView tblTeams.;
+    */
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
        
-            /////////////// TEST //////////////
-          teamModel.getTeams().add(new Team(1, "Fc Barcelona"));
-          teamModel.getTeams().add(new Team(2, "Fc Milan"));
-          teamModel.getTeams().add(new Team(3, "Fc John"));
-          teamModel.getTeams().add(new Team(4, "Fc Cat"));
-          teamModel.getTeams().add(new Team(5, "Fc Dog"));
-          teamModel.getTeams().add(new Team(6, "Fc Chair"));
-          teamModel.getTeams().add(new Team(7, "Fc Hat"));
-          teamModel.getTeams().add(new Team(8, "Fc Ground"));
-          teamModel.getTeams().add(new Team(9, "Fc Fire"));
-          teamModel.getTeams().add(new Team(10, "Fc handsome"));
-          teamModel.getTeams().add(new Team(11, "Fc sad"));
-          teamModel.getTeams().add(new Team(12, "Fc Frustrated"));
-          teamModel.getTeams().add(new Team(13, "Fc WE"));
-          teamModel.getTeams().add(new Team(14, "Fc DID"));
-          teamModel.getTeams().add(new Team(15, "Fc IT"));
-          teamModel.getTeams().add(new Team(16, "Fc !"));
-          ////////////////////TEST//////////////////
-          
+         
           
         clmTeamId.setCellValueFactory(new PropertyValueFactory<>("id"));
         clmTeamName.setCellValueFactory(new PropertyValueFactory<>("name"));
 
         tblTeams.setItems(teamModel.getTeams()); // Binding
     }
-
-    @FXML
+/*
+*    if the teamcount is between 12 and 16, it´ possible to press the generatebutton.
+    whenthe button is presset the stage is set to MainVeiw
+*/  @FXML
     private void generatebtnAction(ActionEvent event) 
     {
 
@@ -129,7 +115,12 @@ public class TournamentManagerViewController implements Initializable
             }
         }
     }
-
+    /*
+    * If the textfield, is not empty, and the button is pressed, A team and an Id is added to an observablelist get.Teams and the 
+    the teamId incresses.
+    the textfield is then cleared.
+    if textfield is empty. warning message is displayed.
+    */
     @FXML
     private void addbtnAction(ActionEvent event) throws IOException
     {
@@ -149,7 +140,10 @@ public class TournamentManagerViewController implements Initializable
         }
 
     }
-
+    /*
+    *When a Team i selected, and the button is pressed. the team is removed from getTeams
+    and the teamCount is decressed, and the textfield is cleared.
+    */
     @FXML
     private void deletebtnAction(ActionEvent event)
     {
@@ -164,21 +158,7 @@ public class TournamentManagerViewController implements Initializable
 
     }
 
-    @FXML
-    private void updateBtnAction(ActionEvent event)
-    {
-         
-        if (!txtField.getText().isEmpty())
-        {
-
-            teamModel.getTeams().add(new Team(teamId, txtField.getText()));
-            teamcountlbl.setText("" + ++teamCount);
-            txtField.clear();
-            warningSign.setText("");
-        } else
-        {
-            warningSign.setText("Warning: team name required");
-        }
+    
     }
 
-}
+
