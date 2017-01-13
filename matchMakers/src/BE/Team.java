@@ -6,9 +6,11 @@
 package BE;
 
 /*s
- ss
+ 
  * @author robiesun
- */
+* 
+*This is where all the team attributes are set. and where all the setter and getter are created.
+*/
 public class Team
 {
 
