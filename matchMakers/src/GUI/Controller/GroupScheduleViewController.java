@@ -152,9 +152,22 @@ public class GroupScheduleViewController implements Initializable
     {
         int y = Integer.parseInt(txtMatchId.getText());
         int x = Integer.parseInt(txtHomeScore.getText());
+        int z = Integer.parseInt(txtGuestScore.getText());
         
-        //groupModel.group
+        groupModel.UpdateMatchInATable(y, x, z);
+        groupModel.UpdateMatchInBTable(y, x, z);
         
+//        Match matchToUpdate2 = groupModel.GroupBPlay().get(y);
+//        Match matchToUpdate3 = groupModel.GroupCPlay().get(y);
+//        Match matchToUpdate4 = groupModel.GroupDPlay().get(y);
+//        
+//        
+//        matchToUpdate2.setHomeScore(x);
+//        matchToUpdate2.setAwayScore(z);
+//        matchToUpdate3.setHomeScore(x);
+//        matchToUpdate3.setAwayScore(z);
+//        matchToUpdate4.setHomeScore(x);
+//        matchToUpdate4.setAwayScore(z);
         
     }
 

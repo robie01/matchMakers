@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI.View;
 
 import GUI.Model.GroupModel;
 import GUI.Model.TeamModel;
@@ -89,7 +88,7 @@ public class FinalsController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        txtFirstQuarterFinalist.setText();
+        /*txtFirstQuarterFinalist.setText();
         txtSecondQuarterFinalist.setText();
         
         txt3rdQuarterFinalist.setText();
@@ -99,7 +98,7 @@ public class FinalsController implements Initializable
         txt6thQuarterFinalist.setText();
         
         txt7thQuarterFinalist.setText();
-        txt8thQuarterFinalist.setText();
+        txt8thQuarterFinalist.setText();*/
     }    
 
     @FXML

@@ -7,9 +7,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1076.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.GroupScheduleViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="843.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.GroupScheduleViewController">
    <children>
-      <TableView fx:id="tblViewA" layoutX="-1.0" prefHeight="383.0" prefWidth="512.0">
+      <TableView fx:id="tblViewA" layoutX="75.0" prefHeight="400.0" prefWidth="504.0">
         <columns>
           <TableColumn fx:id="clmHomeTeamA" prefWidth="161.0" text="Home Team" />
           <TableColumn fx:id="clmHGoalA" prefWidth="69.0" text="H" />
@@ -18,7 +18,7 @@
             <TableColumn fx:id="clmMatchIDA" prefWidth="84.0" text="Match ID's" />
         </columns>
       </TableView>
-      <TableView fx:id="tblViewB" layoutX="572.0" prefHeight="383.0" prefWidth="504.0">
+      <TableView fx:id="tblViewB" layoutX="636.0" prefHeight="400.0" prefWidth="504.0">
         <columns>
           <TableColumn fx:id="clmHomeTeamB" prefWidth="143.0" text="Home Team" />
           <TableColumn fx:id="clmHGoalB" prefWidth="63.0" text="H" />
@@ -27,16 +27,16 @@
             <TableColumn fx:id="clmMatchIDB" prefWidth="98.0" text="Match ID's" />
         </columns>
       </TableView>
-      <TableView fx:id="tblViewC" layoutX="-1.0" layoutY="430.0" prefHeight="351.0" prefWidth="512.0">
+      <TableView fx:id="tblViewC" layoutX="75.0" layoutY="440.0" prefHeight="400.0" prefWidth="504.0">
         <columns>
           <TableColumn fx:id="clmHomeTeamC" prefWidth="163.0" text="Home Team" />
           <TableColumn fx:id="clmHGoalC" prefWidth="63.0" text="H" />
             <TableColumn fx:id="clmGGoalC" prefWidth="61.0" text="G" />
-            <TableColumn fx:id="clmGuestTeamC" prefWidth="136.0" text="Guest Team" />
-            <TableColumn fx:id="clmMatchIDC" prefWidth="86.0" text="Match ID's" />
+            <TableColumn fx:id="clmGuestTeamC" prefWidth="132.0" text="Guest Team" />
+            <TableColumn fx:id="clmMatchIDC" prefWidth="84.0" text="Match ID's" />
         </columns>
       </TableView>
-      <TableView fx:id="tblViewD" layoutX="574.0" layoutY="430.0" prefHeight="351.0" prefWidth="496.0">
+      <TableView fx:id="tblViewD" layoutX="636.0" layoutY="440.0" prefHeight="400.0" prefWidth="496.0">
         <columns>
           <TableColumn fx:id="clmHomeTeamD" prefWidth="139.0" text="Home Team" />
           <TableColumn fx:id="clmHGoalD" prefWidth="54.0" text="H" />
@@ -45,12 +45,28 @@
             <TableColumn fx:id="clmMatchIDD" prefWidth="96.0" text="Match ID's" />
         </columns>
       </TableView>
-      <TextField fx:id="txtHomeScore" layoutX="235.0" layoutY="392.0" prefHeight="31.0" prefWidth="155.0" />
-      <TextField fx:id="txtGuestScore" layoutX="481.0" layoutY="392.0" prefHeight="31.0" prefWidth="155.0" />
-      <TextField fx:id="txtMatchId" layoutX="720.0" layoutY="392.0" prefHeight="31.0" prefWidth="155.0" />
-      <Button fx:id="btnSetScore" layoutX="891.0" layoutY="392.0" mnemonicParsing="false" onAction="#actionEventSubmit" text="Submit" />
-      <Label layoutX="154.0" layoutY="397.0" text="HomeScore:" />
-      <Label layoutX="397.0" layoutY="397.0" prefHeight="21.0" prefWidth="81.0" text="GuestScore:" />
-      <Label layoutX="652.0" layoutY="397.0" text="MatchId:" />
+      <TextField fx:id="txtHomeScore" layoutX="235.0" layoutY="403.0" prefHeight="31.0" prefWidth="155.0" />
+      <TextField fx:id="txtGuestScore" layoutX="481.0" layoutY="403.0" prefHeight="31.0" prefWidth="155.0" />
+      <TextField fx:id="txtMatchId" layoutX="720.0" layoutY="403.0" prefHeight="31.0" prefWidth="155.0" />
+      <Button fx:id="btnSetScore" layoutX="896.0" layoutY="403.0" mnemonicParsing="false" onAction="#actionEventSubmit" text="Submit" />
+      <Label layoutX="154.0" layoutY="408.0" text="HomeScore:" />
+      <Label layoutX="400.0" layoutY="408.0" prefHeight="21.0" prefWidth="81.0" text="GuestScore:" />
+      <Label layoutX="655.0" layoutY="408.0" text="MatchId:" />
+      <Label layoutX="18.0" layoutY="33.0" text="Round 1" />
+      <Label layoutX="17.0" layoutY="152.0" prefHeight="21.0" prefWidth="58.0" text="Round 3" />
+      <Label layoutX="18.0" layoutY="96.0" text="Round 2" />
+      <Label layoutX="18.0" layoutY="212.0" text="Round 4" />
+      <Label layoutX="18.0" layoutY="271.0" text="Round 5" />
+      <Label layoutX="18.0" layoutY="333.0" text="Round 6" />
+      <Label layoutX="18.0" layoutY="475.0" text="Round 1" />
+      <Label layoutX="18.0" layoutY="764.0" text="Round 6" />
+      <Label layoutX="18.0" layoutY="707.0" text="Round 5" />
+      <Label layoutX="18.0" layoutY="650.0" text="Round 4" />
+      <Label layoutX="18.0" layoutY="587.0" text="Round 3" />
+      <Label layoutX="18.0" layoutY="532.0" text="Round 2" />
+      <Label layoutX="7.0" layoutY="3.0" prefHeight="21.0" prefWidth="67.0" text="Group A" />
+      <Label layoutX="579.0" layoutY="3.0" text="Group B" />
+      <Label layoutX="13.0" layoutY="440.0" text="Group C" />
+      <Label layoutX="578.0" layoutY="440.0" text="Group D" />
    </children>
 </AnchorPane>

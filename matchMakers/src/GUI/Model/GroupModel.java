@@ -116,7 +116,8 @@ public ArrayList<ArrayList<Team>> getAllGroups()
 
     public ObservableList<Match> GroupAPlay()
     {
-
+        
+        matchList1A.clear();
         if (listA.size() == 4)
         {
 
@@ -159,18 +160,20 @@ public ArrayList<ArrayList<Team>> getAllGroups()
 
         } else
         {
+            
+              matchList2A.clear();
             //First Round
-            Match Match13 = new Match(groupModel.getListA().get(0), groupModel.getListA().get(1), 12);
+            Match Match13 = new Match(groupModel.getListA().get(0), groupModel.getListA().get(1), 0);
             //Second Round
-            Match Match14 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(2), 13);
+            Match Match14 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(2), 1);
             //Third Round
-            Match Match15 = new Match(groupModel.getListA().get(2), groupModel.getListA().get(0), 14);
+            Match Match15 = new Match(groupModel.getListA().get(2), groupModel.getListA().get(0), 2);
             //Fourth Round
-            Match Match16 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(0), 16);
+            Match Match16 = new Match(groupModel.getListA().get(1), groupModel.getListA().get(0), 3);
             //Fifth Round
-            Match Match17 = new Match(groupModel.getListA().get(0), groupModel.getListA().get(2), 17);
+            Match Match17 = new Match(groupModel.getListA().get(0), groupModel.getListA().get(2), 4);
             //Sixth Round
-            Match Match18 = new Match(groupModel.getListA().get(2), groupModel.getListA().get(1), 18);
+            Match Match18 = new Match(groupModel.getListA().get(2), groupModel.getListA().get(1), 5);
 
             matchList2A.add(Match13);
             matchList2A.add(Match14);
@@ -181,32 +184,77 @@ public ArrayList<ArrayList<Team>> getAllGroups()
 
             return matchList2A;
         }
-
+        
+        
+    }
+    
+    public void UpdateMatchInATable(int matchId, int homeScore, int guestScore)
+    {
+        Match matchToUpdate = null;
+        
+        for (Match match : matchList1A)
+        {
+            if(matchId==match.getMatchID())
+            {
+            matchToUpdate = match;
+            }
+        }
+        if(matchToUpdate != null){
+        matchList1A.remove(matchToUpdate);
+        matchToUpdate.setHomeScore(homeScore);
+        matchToUpdate.setAwayScore(guestScore);
+        
+        
+        matchList1A.add(matchToUpdate);
+        matchToUpdate = null;
+        }
+    }
+    public void UpdateMatchInBTable(int matchId, int homeScore, int guestScore)
+    {
+        Match matchToUpdate = null;
+        
+        for (Match match : matchList1B)
+        {
+            if(matchId==match.getMatchID())
+            {
+            matchToUpdate = match;
+            }
+        }
+        if(matchToUpdate != null){
+        matchList1B.remove(matchToUpdate);
+        matchToUpdate.setHomeScore(homeScore);
+        matchToUpdate.setAwayScore(guestScore);
+        
+        
+        matchList1A.add(matchToUpdate);
+        matchToUpdate = null;
+        }
     }
     
     public ObservableList<Match> GroupBPlay()
     {
-
+        
+        matchList1B.clear();
         if (listB.size() == 4)
         {
             //First Round
-            Match Match19 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(1), 19);
-            Match Match20 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(3), 20);
+            Match Match19 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(1), 12);
+            Match Match20 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(3), 13);
             //Second Round
-            Match Match21 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(2), 21);
-            Match Match22 = new Match(groupModel.getListB().get(3), groupModel.getListB().get(0), 22);
+            Match Match21 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(2), 14);
+            Match Match22 = new Match(groupModel.getListB().get(3), groupModel.getListB().get(0), 15);
             //Third Round
-            Match Match23 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(3), 23);
-            Match Match24 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(2), 24);
+            Match Match23 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(3), 16);
+            Match Match24 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(2), 17);
             //Fourth Round
-            Match Match25 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(0), 25);
-            Match Match26 = new Match(groupModel.getListB().get(3), groupModel.getListB().get(2), 26);
+            Match Match25 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(0), 18);
+            Match Match26 = new Match(groupModel.getListB().get(3), groupModel.getListB().get(2), 19);
             //Fifth Round
-            Match Match27 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(1), 27);
-            Match Match28 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(3), 28);
+            Match Match27 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(1), 20);
+            Match Match28 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(3), 21);
             //Sixth Round
-            Match Match29 = new Match(groupModel.getListB().get(3), groupModel.getListB().get(1), 29);
-            Match Match30 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(0), 30);
+            Match Match29 = new Match(groupModel.getListB().get(3), groupModel.getListB().get(1), 22);
+            Match Match30 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(0), 23);
 
             matchList1B.add(Match19);
             matchList1B.add(Match20);
@@ -225,19 +273,20 @@ public ArrayList<ArrayList<Team>> getAllGroups()
 
         } else
         {
-
+            
+            matchList2B.clear();
             //First round
-            Match Match31 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(1), 31);
+            Match Match31 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(1), 6);
             //Second Round
-            Match Match32 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(2), 32);
+            Match Match32 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(2), 7);
             //Third Round
-            Match Match33 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(0), 33);
+            Match Match33 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(0), 8);
             //Fourth Round
-            Match Match34 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(0), 34);
+            Match Match34 = new Match(groupModel.getListB().get(1), groupModel.getListB().get(0), 9);
             //Fifth
-            Match Match35 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(2), 35);
+            Match Match35 = new Match(groupModel.getListB().get(0), groupModel.getListB().get(2), 10);
             //Sixth
-            Match Match36 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(1), 36);
+            Match Match36 = new Match(groupModel.getListB().get(2), groupModel.getListB().get(1), 11);
 
             matchList2B.add(Match31);
             matchList2B.add(Match32);
@@ -254,28 +303,29 @@ public ArrayList<ArrayList<Team>> getAllGroups()
 
     public ObservableList<Match> GroupCPlay()
     {
-
+        
+        matchList1C.clear();
         if (listC.size() == 4)
         {
 
             //First Round
-            Match Match37 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(1), 37);
-            Match Match38 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(3), 38);
+            Match Match37 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(1), 24);
+            Match Match38 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(3), 25);
             //Second Round
-            Match Match39 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(2), 39);
-            Match Match40 = new Match(groupModel.getListC().get(3), groupModel.getListC().get(0), 40);
+            Match Match39 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(2), 26);
+            Match Match40 = new Match(groupModel.getListC().get(3), groupModel.getListC().get(0), 27);
             //Third Round
-            Match Match41 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(3), 41);
-            Match Match42 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(2), 42);
+            Match Match41 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(3), 28);
+            Match Match42 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(2), 29);
             //Fourth Round
-            Match Match43 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(0), 43);
-            Match Match44 = new Match(groupModel.getListC().get(3), groupModel.getListC().get(2), 44);
+            Match Match43 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(0), 30);
+            Match Match44 = new Match(groupModel.getListC().get(3), groupModel.getListC().get(2), 31);
             //Fifth Round
-            Match Match45 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(1), 45);
-            Match Match46 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(3), 46);
+            Match Match45 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(1), 32);
+            Match Match46 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(3), 33);
             //Sixth Round
-            Match Match47 = new Match(groupModel.getListC().get(3), groupModel.getListC().get(1), 47);
-            Match Match48 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(0), 48);
+            Match Match47 = new Match(groupModel.getListC().get(3), groupModel.getListC().get(1), 34);
+            Match Match48 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(0), 35);
 
             matchList1C.add(Match37);
             matchList1C.add(Match38);
@@ -294,19 +344,20 @@ public ArrayList<ArrayList<Team>> getAllGroups()
 
         } else
         {
-
+            
+            matchList2C.clear();
             //First Round
-            Match Match49 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(1), 49);
+            Match Match49 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(1), 12);
             //Second Round
-            Match Match50 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(2), 50);
+            Match Match50 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(2), 13);
             //Third Round
-            Match Match51 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(0), 51);
+            Match Match51 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(0), 14);
             //Four Round
-            Match Match52 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(0), 52);
+            Match Match52 = new Match(groupModel.getListC().get(1), groupModel.getListC().get(0), 15);
             //Fifth Round
-            Match Match53 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(2), 53);
+            Match Match53 = new Match(groupModel.getListC().get(0), groupModel.getListC().get(2), 16);
             //Sixth Round
-            Match Match54 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(1), 54);
+            Match Match54 = new Match(groupModel.getListC().get(2), groupModel.getListC().get(1), 17);
 
             matchList2C.add(Match49);
             matchList2C.add(Match50);
@@ -323,28 +374,29 @@ public ArrayList<ArrayList<Team>> getAllGroups()
 
     public ObservableList<Match> GroupDPlay()
     {
-
+        
+        matchList1D.clear();
         if (listD.size() == 4)
         {
 
             //First Round
-            Match Match55 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(1), 55);
-            Match Match56 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(3), 56);
+            Match Match55 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(1), 36);
+            Match Match56 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(3), 37);
             //Second Round
-            Match Match57 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(2), 57);
-            Match Match58 = new Match(groupModel.getListD().get(3), groupModel.getListD().get(0), 58);
+            Match Match57 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(2), 38);
+            Match Match58 = new Match(groupModel.getListD().get(3), groupModel.getListD().get(0), 39);
             //Third Round
-            Match Match59 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(3), 59);
-            Match Match60 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(2), 60);
+            Match Match59 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(3), 40);
+            Match Match60 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(2), 41);
             //Fourth Round
-            Match Match61 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(0), 61);
-            Match Match62 = new Match(groupModel.getListD().get(3), groupModel.getListD().get(2), 62);
+            Match Match61 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(0), 42);
+            Match Match62 = new Match(groupModel.getListD().get(3), groupModel.getListD().get(2), 43);
             //Fifth Round
-            Match Match63 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(1), 63);
-            Match Match64 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(3), 64);
+            Match Match63 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(1), 44);
+            Match Match64 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(3), 45);
             //Sixth Round
-            Match Match65 = new Match(groupModel.getListD().get(3), groupModel.getListD().get(1), 65);
-            Match Match66 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(0), 66);
+            Match Match65 = new Match(groupModel.getListD().get(3), groupModel.getListD().get(1), 46);
+            Match Match66 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(0), 47);
 
             matchList1D.add(Match55);
             matchList1D.add(Match56);
@@ -363,19 +415,20 @@ public ArrayList<ArrayList<Team>> getAllGroups()
 
         } else
         {
-
+            
+             matchList2D.clear();
             //first round
-            Match Match67 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(1), 67);
+            Match Match67 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(1), 18);
             //Second Round
-            Match Match68 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(2), 68);
+            Match Match68 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(2), 19);
             //Third Round
-            Match Match69 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(0), 69);
+            Match Match69 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(0), 20);
             //Four Round
-            Match Match70 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(0), 70);
+            Match Match70 = new Match(groupModel.getListD().get(1), groupModel.getListD().get(0), 21);
             //Fifth Round
-            Match Match71 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(2), 71);
+            Match Match71 = new Match(groupModel.getListD().get(0), groupModel.getListD().get(2), 22);
             //Sixth Round
-            Match Match72 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(1), 72);
+            Match Match72 = new Match(groupModel.getListD().get(2), groupModel.getListD().get(1), 23);
 
             matchList2D.add(Match67);
             matchList2D.add(Match68);

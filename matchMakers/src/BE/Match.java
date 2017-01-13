@@ -13,6 +13,9 @@ public class Match {
     
 private Team homeTeam, awayTeam;
 private int homeScore, awayScore, matchID, round; 
+private static final int WIN = 3, LOSE = 0, DRAW = 1;
+private boolean noMatch = true;
+
 
 
 public Match( Team homeTeam, Team awayteam, int matchID) {
@@ -62,16 +65,57 @@ public Match( Team homeTeam, Team awayteam, int matchID) {
     public void setMatchID(int matchID) {
         this.matchID = matchID;
     }
+    public Team getWinner()
+    {
+        if(!noMatch)
+        {
+            if(homeScore > awayScore)
+            {
+                return homeTeam;
+            }
+            else if(homeScore<awayScore)
+            {
+                return awayTeam;
+                
+            }
+            else {
+                
+            }
+        }
+        
+    
+        return null;
 
-
-   
+    }
+    public Team setWinner(int homeScore,int awayScore)
+    {
+        if(this.homeScore == this.awayScore)
+        {
+            
+           homeScore = DRAW;
+           awayScore = DRAW;
+        }
+        else if( this.homeScore < this.awayScore)
+        {
+            homeScore = LOSE;
+            awayScore = WIN;
+            
+        }
+        else if (this.homeScore > this.awayScore)
+        {
+            homeScore = WIN;
+            awayScore = LOSE;
+        }
+        return null;
+    }
 
     
 @Override
     public String toString(){
         return "HomeTeam:" + homeTeam + "AwayTeam" + awayTeam +"/t"+ matchID; 
     }
-    
+
+   
     
     
     
