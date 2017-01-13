@@ -6,19 +6,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainView1Controller">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainView1Controller">
    <children>
       <Label layoutX="21.0" layoutY="9.0" prefHeight="30.0" prefWidth="193.0" text="Group Match" textFill="#161d9e">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
-      <Button fx:id="teamS" layoutX="103.0" layoutY="431.0" mnemonicParsing="false" onAction="#teamSAction" prefHeight="47.0" prefWidth="133.0" text="Team  Schedule" />
-      <Button fx:id="matchS" layoutX="266.0" layoutY="431.0" mnemonicParsing="false" onAction="#matchSAction" prefHeight="47.0" prefWidth="133.0" text="Match Schedule" />
-      <Button fx:id="btnGroupMatch" layoutX="424.0" layoutY="434.0" mnemonicParsing="false" onAction="#groupRankAction" prefHeight="47.0" prefWidth="173.0" text="Group Match Schedule" />
+      <Button fx:id="teamS" layoutX="25.0" layoutY="431.0" mnemonicParsing="false" onAction="#teamSAction" prefHeight="47.0" prefWidth="133.0" text="Team  Schedule" />
+      <Button fx:id="matchS" layoutX="182.0" layoutY="431.0" mnemonicParsing="false" onAction="#matchSAction" prefHeight="47.0" prefWidth="133.0" text="Match Schedule" />
+      <Button fx:id="btnGroupMatch" layoutX="350.0" layoutY="431.0" mnemonicParsing="false" onAction="#groupMatchAction" prefHeight="47.0" prefWidth="167.0" text="Group Match Schedule" />
       <ListView fx:id="listA" layoutX="18.0" layoutY="104.0" prefHeight="200.0" prefWidth="147.0" />
       <ListView fx:id="listD" layoutX="510.0" layoutY="104.0" prefHeight="200.0" prefWidth="147.0" />
       <ListView fx:id="listC" layoutX="344.0" layoutY="104.0" prefHeight="200.0" prefWidth="147.0" />
       <ListView fx:id="listB" layoutX="175.0" layoutY="104.0" prefHeight="200.0" prefWidth="147.0" />
+      <Button fx:id="btnRanking" layoutX="537.0" layoutY="431.0" mnemonicParsing="false" onAction="#RankingAction" prefHeight="47.0" prefWidth="112.0" text="Ranking" />
    </children>
 </AnchorPane>

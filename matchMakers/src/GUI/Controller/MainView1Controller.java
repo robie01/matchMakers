@@ -54,6 +54,8 @@ public class MainView1Controller implements Initializable
     private ListView<Team> listB;
     @FXML
     private Button btnGroupMatch;
+    @FXML
+    private Button btnRanking;
 
     @Override
     public void initialize(URL url, ResourceBundle rb)
@@ -90,7 +92,7 @@ public class MainView1Controller implements Initializable
     }
 
     @FXML
-    private void groupRankAction(ActionEvent event) throws IOException
+    private void groupMatchAction(ActionEvent event) throws IOException
     {
         Stage stage;
         Parent root;
@@ -119,6 +121,22 @@ public class MainView1Controller implements Initializable
         listC.setItems(FXCollections.observableArrayList(groupModel.getAllGroups().get(2)));
 
         listD.setItems(FXCollections.observableArrayList(groupModel.getAllGroups().get(3)));
+    }
+
+    @FXML
+    private void RankingAction(ActionEvent event) throws IOException {
+    Stage stage;
+    Parent root;
+    
+if(event.getSource()==btnRanking){
+    stage = new Stage();
+    root = FXMLLoader.load(getClass().getResource("/GUI/View/Rankings.fxml"));
+    stage.setScene(new Scene(root));
+    stage.setTitle("Group Ranking");
+    stage.initModality(Modality.APPLICATION_MODAL);
+    stage.initOwner(btnRanking.getScene().getWindow());
+    stage.showAndWait();
+}    
     }
 
 }
