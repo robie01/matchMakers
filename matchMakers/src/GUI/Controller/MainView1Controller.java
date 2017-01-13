@@ -106,7 +106,9 @@ public class MainView1Controller implements Initializable
             stage.showAndWait();
         }
     }
-
+    /*
+    * This sets all the team names in each group. And each group is recognized from its index from 0-3.
+    */
     public void displayGroups()
     {
 

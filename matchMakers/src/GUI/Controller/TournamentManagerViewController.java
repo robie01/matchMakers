@@ -7,6 +7,7 @@ package GUI.Controller;
 
 
 import BE.Team;
+import GUI.Model.GroupModel;
 import GUI.Model.TeamModel;
 
 import java.io.IOException;
@@ -82,6 +83,10 @@ public class TournamentManagerViewController implements Initializable
           teamModel.getTeams().add(new Team(10, "Fc handsome"));
           teamModel.getTeams().add(new Team(11, "Fc sad"));
           teamModel.getTeams().add(new Team(12, "Fc Frustrated"));
+          teamModel.getTeams().add(new Team(13, "Fc WE"));
+          teamModel.getTeams().add(new Team(14, "Fc DID"));
+          teamModel.getTeams().add(new Team(15, "Fc IT"));
+          teamModel.getTeams().add(new Team(16, "Fc !"));
           ////////////////////TEST//////////////////
           
           
@@ -162,7 +167,7 @@ public class TournamentManagerViewController implements Initializable
     @FXML
     private void updateBtnAction(ActionEvent event)
     {
-
+         
         if (!txtField.getText().isEmpty())
         {
 
