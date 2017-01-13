@@ -24,6 +24,10 @@ import javafx.collections.ObservableList;
  * FXML Controller class
  *
  * @author EdwinSilva
+ * Controls the information displayed in the Randking.fxml;
+ * 
+ * 
+ * 
  */
 public class RankingController implements Initializable {
 
@@ -90,9 +94,14 @@ public class RankingController implements Initializable {
 
         getRankingNames();
         getRankingNamesId();
+        getGoalDif();
+        getPoint();
 
     }
 
+    /*
+    *Gets all the team names in the arraylist list for the teams, and store them in the diffirent listview;
+     */
     private void getRankingNames() {
         RankingANames.getItems().clear();
         RankingBNames.getItems().clear();
@@ -116,6 +125,9 @@ public class RankingController implements Initializable {
         }
     }
 
+    /*
+    *Gets all the id´ from the arraylist list for the teams, and store them in adiffrent listview;
+     */
     private void getRankingNamesId() {
         rankingAId.getItems().clear();
         rankingBId.getItems().clear();
@@ -137,7 +149,53 @@ public class RankingController implements Initializable {
         }
 
     }
-public void getGoalDif(){
-    
-}
+
+    /*
+    *Gets all the point from the arraylist list for the each teams, and store them in listview;
+     */
+    public void getPoint() {
+        rankingAPoints.getItems();
+        rankingAPoints.getItems();
+        rankingAPoints.getItems();
+        rankingAPoints.getItems();
+
+        for (int i = 0; i < groupModel.getListA().size(); i++) {
+            rankingAPoints.getItems().add(groupModel.getListA().get(i).getPoint());
+        }
+        for (int i = 0; i < groupModel.getListB().size(); i++) {
+            rankingBPoints.getItems().add(groupModel.getListB().get(i).getPoint());
+
+        }
+        for (int i = 0; i < groupModel.getListC().size(); i++) {
+            rankingCPoints.getItems().add(groupModel.getListC().get(i).getPoint());
+
+        }
+        for (int i = 0; i < groupModel.getListD().size(); i++) {
+            rankingDPoints.getItems().add(groupModel.getListD().get(i).getPoint());
+        }
+    }
+/*
+* Not working yet. but i sould get the goal difference by HomeScore-AwayScore = Goal difference:
+*/
+    public void getGoalDif() {
+        rankingAGoalDif.getItems().clear();
+        rankingBGoalDif.getItems().clear();
+        rankingCGoalDif.getItems().clear();
+        rankingDGoalDif.getItems().clear();
+        for (int i = 0; i < groupModel.getListA().size(); i++) {
+            rankingAGoalDif.getItems().add(groupModel.getListA().get(i).getGoalsDiff());
+        }
+        for (int i = 0; i < groupModel.getListB().size(); i++) {
+            rankingBGoalDif.getItems().add(groupModel.getListB().get(i).getGoalsDiff());
+
+        }
+        for (int i = 0; i < groupModel.getListC().size(); i++) {
+            rankingCGoalDif.getItems().add(groupModel.getListC().get(i).getGoalsDiff());
+        }
+        for (int i = 0; i < groupModel.getListD().size(); i++) {
+            rankingDGoalDif.getItems().add(groupModel.getListD().get(i).getGoalsDiff());
+
+        }
+
+    }
 }
