@@ -111,6 +111,7 @@ public class MainView1Controller implements Initializable
 
     public void displayGroups()
     {
+        
 
         listA.setItems(FXCollections.observableArrayList(groupModel.getAllGroups().get(0)));
 

@@ -7,7 +7,7 @@ package GUI.Model;
 
 
 import BE.Team;
-import com.sun.org.apache.xpath.internal.axes.SubContextList;
+
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Random;

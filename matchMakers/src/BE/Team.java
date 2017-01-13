@@ -11,7 +11,7 @@ package BE;
  */
 public class Team
 {
-    private int id, point, goals, goalsLetIn, goalsD;
+    private int id, point, goals, goalsLetIn, goalsDiff;
     private String name, group;
 
     
@@ -23,6 +23,8 @@ public class Team
         this.name = name;
         point = 0;
         goalsLetIn = 0;
+        goals = 0;
+        goalsDiff = 0;
     }
 
     public int getId() {
@@ -57,12 +59,12 @@ public class Team
         this.goalsLetIn = goalsLetIn;
     }
 
-    public int getGoalsD() {
-        return goalsD;
+    public int getGoalsDiff() {
+        return goalsDiff;
     }
 
-    public void setGoalsD(int goalsD) {
-        this.goalsD = goalsD;
+    public void setGoalsDiff(int goalsDiff) {
+        this.goalsDiff = goalsDiff;
     }
 
     public String getName() {
@@ -86,6 +88,7 @@ public class Team
     public String toString() {
         return name + "\t" + id + "\t" + "id";
     }
+    
     
     
     
